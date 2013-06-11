@@ -24,10 +24,17 @@ describe(@"BankAccountEntity test", ^{
             [[theValue([en.balance isKindOfClass:[NSNumber class]]) should] equal:theValue(YES)];
         });
         
-        it(@"openTimestamp is kind of class NSDate", ^{
+        it(@"openTimestamp is kind of class NSString", ^{
             BankAccountEntity *en = [[BankAccountEntity alloc] init];
             [[theValue([en.openTimestamp isKindOfClass:[NSString class]]) should] equal:theValue(YES)];
         });
+        
+        it(@"balance is Equal 0", ^{
+            BankAccountEntity *en = [[BankAccountEntity alloc] init];
+            [[theValue(en.balance) should]equal:theValue(@0)];
+        });
+        
+                
     });
 });
 SPEC_END
