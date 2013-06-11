@@ -1,24 +1,25 @@
 //
-//  BankAccount.m
+//  BankAccountEntity.m
 //  BankAccount
 //
-//  Created by Truong Tran  The on 6/10/13.
+//  Created by Truong Tran  The on 6/11/13.
 //  Copyright (c) 2013 Thett. All rights reserved.
 //
 
-#import "BankAccount.h"
+#import "BankAccountEntity.h"
 
-@implementation BankAccount
+@implementation BankAccountEntity
 @synthesize accountNumber;
-@synthesize balance;
 @synthesize openTimestamp;
+@synthesize balance;
 
-- (id)init{
+-(id)init{
     self = [super init];
+    
     if(self){
         accountNumber = [[NSString alloc] init];
-        balance = 0;
         openTimestamp = [[NSString alloc] init];
+        balance = @0;
     }
     
     return self;

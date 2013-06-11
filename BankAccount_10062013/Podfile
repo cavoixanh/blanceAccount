@@ -1,0 +1,1 @@
+platform :ios, '6.1'target :BankAccountTests, :exclusive => true do   pod 'kiwi'endß

@@ -24,6 +24,7 @@
 		5B0FE2651765ABE6005A98D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B0FE2631765ABE6005A98D5 /* InfoPlist.strings */; };
 		5B0FE2681765ABE6005A98D5 /* BankAccountTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0FE2671765ABE6005A98D5 /* BankAccountTests.m */; };
 		5B0FE2731765AD2A005A98D5 /* BankAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0FE2721765AD2A005A98D5 /* BankAccount.m */; };
+		5B0FE2761765B06D005A98D5 /* BankAccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0FE2751765B06D005A98D5 /* BankAccountDAO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		5B0FE2671765ABE6005A98D5 /* BankAccountTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankAccountTests.m; sourceTree = "<group>"; };
 		5B0FE2711765AD2A005A98D5 /* BankAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccount.h; sourceTree = "<group>"; };
 		5B0FE2721765AD2A005A98D5 /* BankAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccount.m; sourceTree = "<group>"; };
+		5B0FE2741765B06D005A98D5 /* BankAccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountDAO.h; sourceTree = "<group>"; };
+		5B0FE2751765B06D005A98D5 /* BankAccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountDAO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				5B0FE23D1765ABE5005A98D5 /* Supporting Files */,
 				5B0FE2711765AD2A005A98D5 /* BankAccount.h */,
 				5B0FE2721765AD2A005A98D5 /* BankAccount.m */,
+				5B0FE2741765B06D005A98D5 /* BankAccountDAO.h */,
+				5B0FE2751765B06D005A98D5 /* BankAccountDAO.m */,
 			);
 			path = BankAccount;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				5B0FE2471765ABE5005A98D5 /* BankAccountAppDelegate.m in Sources */,
 				5B0FE2501765ABE5005A98D5 /* BankAccountViewController.m in Sources */,
 				5B0FE2731765AD2A005A98D5 /* BankAccount.m in Sources */,
+				5B0FE2761765B06D005A98D5 /* BankAccountDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
