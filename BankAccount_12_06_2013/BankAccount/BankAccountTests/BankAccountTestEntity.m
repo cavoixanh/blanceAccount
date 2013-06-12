@@ -19,7 +19,7 @@ SPEC_BEGIN(BankAccountTestEntity){
     it(@"test Entity balance is NSNumber, balance = 0", ^{
         BankAccountEntity *newAccount = [[BankAccountEntity alloc] init];
         [[theValue([newAccount.balance isKindOfClass:[NSNumber class]]) should] equal:theValue(YES)];
-        [[theValue(newAccount.balance) should] equal:@0];
+        [[theValue(newAccount.balance) should] equal:theValue(@0)];
     });
     
     it(@"test Entity open date is NSString", ^{
