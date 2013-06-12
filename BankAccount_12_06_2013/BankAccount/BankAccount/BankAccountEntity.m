@@ -9,5 +9,16 @@
 #import "BankAccountEntity.h"
 
 @implementation BankAccountEntity
-
+@synthesize accountNumber;
+@synthesize openDate;
+@synthesize balance;
+- (id) init{
+    self = [super init];
+    if(self){
+        accountNumber = [[NSString alloc] init];
+        balance = @0;
+        openDate = [[NSString alloc] init];
+    }
+    return self;
+}
 @end
