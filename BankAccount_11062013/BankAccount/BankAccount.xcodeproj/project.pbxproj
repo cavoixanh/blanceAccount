@@ -105,8 +105,17 @@
 		5BE6D963176700D4002A67D0 /* SenTestSuite+KiwiAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D913176700D4002A67D0 /* SenTestSuite+KiwiAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5BE6D9781767015B002A67D0 /* BankAccountEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D9771767015B002A67D0 /* BankAccountEntity.m */; };
 		5BE6D97B1767016E002A67D0 /* BankAccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D97A1767016E002A67D0 /* BankAccountDAO.m */; };
-		5BE6D97E176704ED002A67D0 /* BankAccountTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D97D176704ED002A67D0 /* BankAccountTestEntity.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BE6D97E176704ED002A67D0 /* BankAccountTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D97D176704ED002A67D0 /* BankAccountTestEntity.m */; };
 		5BE6D993176708AF002A67D0 /* BankAccountTestDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D992176708AF002A67D0 /* BankAccountTestDAO.m */; };
+		5BE6D9BC17670C89002A67D0 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5BE6D9AF17670C89002A67D0 /* LICENSE.txt */; };
+		5BE6D9BD17670C89002A67D0 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 5BE6D9B017670C89002A67D0 /* README.markdown */; };
+		5BE6D9BE17670C89002A67D0 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D9B317670C89002A67D0 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BE6D9BF17670C89002A67D0 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D9B517670C89002A67D0 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BE6D9C017670C89002A67D0 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D9B717670C89002A67D0 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BE6D9C117670C89002A67D0 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D9B917670C89002A67D0 /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BE6D9C217670C89002A67D0 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6D9BB17670C89002A67D0 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BE6D9C517670E9A002A67D0 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D9C317670E9A002A67D0 /* libsqlite3.0.dylib */; };
+		5BE6D9C617670E9A002A67D0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D9C417670E9A002A67D0 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -324,6 +333,20 @@
 		5BE6D97D176704ED002A67D0 /* BankAccountTestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTestEntity.m; sourceTree = "<group>"; };
 		5BE6D991176708AF002A67D0 /* BankAccountTestDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountTestDAO.h; sourceTree = "<group>"; };
 		5BE6D992176708AF002A67D0 /* BankAccountTestDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountTestDAO.m; sourceTree = "<group>"; };
+		5BE6D9AF17670C89002A67D0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		5BE6D9B017670C89002A67D0 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		5BE6D9B217670C89002A67D0 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		5BE6D9B317670C89002A67D0 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		5BE6D9B417670C89002A67D0 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		5BE6D9B517670C89002A67D0 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		5BE6D9B617670C89002A67D0 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		5BE6D9B717670C89002A67D0 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		5BE6D9B817670C89002A67D0 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		5BE6D9B917670C89002A67D0 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		5BE6D9BA17670C89002A67D0 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		5BE6D9BB17670C89002A67D0 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		5BE6D9C317670E9A002A67D0 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		5BE6D9C417670E9A002A67D0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,6 +354,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE6D9C517670E9A002A67D0 /* libsqlite3.0.dylib in Frameworks */,
+				5BE6D9C617670E9A002A67D0 /* libsqlite3.dylib in Frameworks */,
 				5BE6D82B17670032002A67D0 /* UIKit.framework in Frameworks */,
 				5BE6D82D17670032002A67D0 /* Foundation.framework in Frameworks */,
 				5BE6D82F17670032002A67D0 /* CoreGraphics.framework in Frameworks */,
@@ -353,6 +378,8 @@
 		5BE6D81E17670031002A67D0 = {
 			isa = PBXGroup;
 			children = (
+				5BE6D9C317670E9A002A67D0 /* libsqlite3.0.dylib */,
+				5BE6D9C417670E9A002A67D0 /* libsqlite3.dylib */,
 				5BE6D83017670032002A67D0 /* BankAccount */,
 				5BE6D85417670032002A67D0 /* BankAccountTests */,
 				5BE6D82917670032002A67D0 /* Frameworks */,
@@ -383,6 +410,7 @@
 		5BE6D83017670032002A67D0 /* BankAccount */ = {
 			isa = PBXGroup;
 			children = (
+				5BE6D9AE17670C89002A67D0 /* FMDB */,
 				5BE6D83917670032002A67D0 /* BankAccountAppDelegate.h */,
 				5BE6D83A17670032002A67D0 /* BankAccountAppDelegate.m */,
 				5BE6D84217670032002A67D0 /* BankAccountViewController.h */,
@@ -616,6 +644,33 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		5BE6D9AE17670C89002A67D0 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6D9AF17670C89002A67D0 /* LICENSE.txt */,
+				5BE6D9B017670C89002A67D0 /* README.markdown */,
+				5BE6D9B117670C89002A67D0 /* src */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		5BE6D9B117670C89002A67D0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6D9B217670C89002A67D0 /* FMDatabase.h */,
+				5BE6D9B317670C89002A67D0 /* FMDatabase.m */,
+				5BE6D9B417670C89002A67D0 /* FMDatabaseAdditions.h */,
+				5BE6D9B517670C89002A67D0 /* FMDatabaseAdditions.m */,
+				5BE6D9B617670C89002A67D0 /* FMDatabasePool.h */,
+				5BE6D9B717670C89002A67D0 /* FMDatabasePool.m */,
+				5BE6D9B817670C89002A67D0 /* FMDatabaseQueue.h */,
+				5BE6D9B917670C89002A67D0 /* FMDatabaseQueue.m */,
+				5BE6D9BA17670C89002A67D0 /* FMResultSet.h */,
+				5BE6D9BB17670C89002A67D0 /* FMResultSet.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -693,6 +748,8 @@
 				5BE6D83F17670032002A67D0 /* Default@2x.png in Resources */,
 				5BE6D84117670032002A67D0 /* Default-568h@2x.png in Resources */,
 				5BE6D84717670032002A67D0 /* BankAccountViewController.xib in Resources */,
+				5BE6D9BC17670C89002A67D0 /* LICENSE.txt in Resources */,
+				5BE6D9BD17670C89002A67D0 /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +789,11 @@
 				5BE6D84417670032002A67D0 /* BankAccountViewController.m in Sources */,
 				5BE6D9781767015B002A67D0 /* BankAccountEntity.m in Sources */,
 				5BE6D97B1767016E002A67D0 /* BankAccountDAO.m in Sources */,
+				5BE6D9BE17670C89002A67D0 /* FMDatabase.m in Sources */,
+				5BE6D9BF17670C89002A67D0 /* FMDatabaseAdditions.m in Sources */,
+				5BE6D9C017670C89002A67D0 /* FMDatabasePool.m in Sources */,
+				5BE6D9C117670C89002A67D0 /* FMDatabaseQueue.m in Sources */,
+				5BE6D9C217670C89002A67D0 /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

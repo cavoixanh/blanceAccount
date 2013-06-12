@@ -7,7 +7,6 @@
 //
 
 #import "BankAccountTestDAO.h"
+#import "Kiwi.h"
+#import "BankAccountDAO.h"
 
-@implementation BankAccountTestDAO
-
-@end
