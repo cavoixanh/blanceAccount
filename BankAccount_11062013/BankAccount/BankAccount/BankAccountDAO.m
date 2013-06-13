@@ -7,7 +7,12 @@
 //
 
 #import "BankAccountDAO.h"
-
+#import "BankAccountEntity.h"
 @implementation BankAccountDAO
+
+-(BankAccountEntity*) insertAccountToDB:(BankAccountEntity*)entity{
+    
+    return nil;
+}
 
 @end

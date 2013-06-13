@@ -10,4 +10,17 @@
 
 @implementation BankAccountDAO
 
+- (id) init{
+    self = [super init];
+    if(self){
+        
+    }
+    return self;
+}
+
+- (NSNumber*) getAccount:(NSString*) accountNumber{
+
+    
+    return @0;
+}
 @end

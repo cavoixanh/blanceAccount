@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BankAccountDAO.h"
+
 
 @interface BankAccountViewController : UIViewController
 
+@property(nonatomic, strong) BankAccountDAO *bankAccountDAO;
+
+- (id)initWithDAO:(BankAccountDAO*) daoObject;
 @end
