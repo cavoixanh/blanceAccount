@@ -23,18 +23,21 @@
     return self;
 }
 
+- (BankAccountEntity*) getInfo:(NSString*) accountNumber{
+    BankAccountEntity *entity = [[BankAccountEntity alloc] init];
+    entity = [bankAccountDAO getInformation:accountNumber];
+    return entity;
+}
+
 -(BankAccountEntity*) openNewAccounntWithAccountNumber:(NSString*) accountNumber{
     BankAccountEntity *entity = [[BankAccountEntity alloc] init];
     entity.accountNumber = accountNumber;
-    entity.balance = @0;
     return entity;
-
 }
+
 -(BankAccountEntity*) CreateNewAccount:(NSString*) accountNumber{
     BankAccountEntity *entity = [self openNewAccounntWithAccountNumber:accountNumber];
-    BankAccountDAO    *dao = [[BankAccountDAO alloc] init];
-    //entity  = [dao insertAccountToDB:entity];
-    
+    entity  = [bankAccountDAO insertAccountToDB:entity];
     return entity;
 }
 

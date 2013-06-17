@@ -32,11 +32,37 @@ SPEC_BEGIN(BankAccountTestDAO){
                 [[viewCotroller.bankAccountDAO should] equal:daoMock];
             });
             
-            it(@"test create new Account to DB", ^{
+            it(@"test create new Account to insert into DB", ^{
+                NSString * accountNumberMock = [NSString nullMock];
+                BankAccountEntity * entityMock = [BankAccountEntity nullMock];
+                BankAccountEntity * expect;
                 
-            
+                [[viewCotroller should] receive:@selector(openNewAccounntWithAccountNumber:) andReturn:entityMock withArguments:accountNumberMock];
+                [daoMock stub:@selector(insertAccountToDB:) andReturn:entityMock withArguments:entityMock];
+                
+                expect = [viewCotroller CreateNewAccount:accountNumberMock];
+                [[expect should] equal:entityMock];
             });
-        
+            
+            it(@"test balance equal 0", ^{
+                NSString * accountNumberMock = [NSString nullMock];
+                BankAccountEntity * entityMock = [BankAccountEntity nullMock];
+                BankAccountEntity * expect ;
+                
+                [daoMock stub:@selector(insertAccountToDB:) andReturn:entityMock withArguments:entityMock];
+                expect = [viewCotroller openNewAccounntWithAccountNumber:accountNumberMock];
+                [[expect.balance should] equal:@0];
+             });
+            
+            it(@"get information", ^{
+                NSString * accountNumberMock = [NSString nullMock];
+                BankAccountEntity * entityMock = [BankAccountEntity nullMock];
+                BankAccountEntity * expect;
+                
+                [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:entityMock];
+                expect = [viewCotroller getInfo:accountNumberMock];
+                //[[expect should] equal:entityMock];
+            });
         });
     });
 

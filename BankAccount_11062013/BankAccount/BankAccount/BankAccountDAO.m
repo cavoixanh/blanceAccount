@@ -10,8 +10,13 @@
 #import "BankAccountEntity.h"
 @implementation BankAccountDAO
 
--(BankAccountEntity*) insertAccountToDB:(BankAccountEntity*)entity{
+-(BankAccountEntity*) insertAccountToDB:(BankAccountEntity*) entity{
     
+    return nil;
+}
+
+- (BankAccountEntity*) getInformation:(NSString*) accountNumber{
+
     return nil;
 }
 
