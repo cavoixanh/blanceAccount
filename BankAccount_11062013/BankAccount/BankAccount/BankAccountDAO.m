@@ -20,4 +20,13 @@
     return nil;
 }
 
+- (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money{
+
+    return nil;
+}
+
+- (BankAccountEntity*) saveTimeStampWhenDepositToDB:(BankAccountEntity*) entity{
+
+    return nil;
+}
 @end

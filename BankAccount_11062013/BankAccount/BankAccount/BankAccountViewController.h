@@ -16,6 +16,8 @@
 
 - (id)initWithDAO:(BankAccountDAO*) daoObject;
 - (BankAccountEntity*) getInfo:(NSString*) accountNumber;
--(BankAccountEntity*) CreateNewAccount:(NSString*) accountNumber;
--(BankAccountEntity*) openNewAccounntWithAccountNumber:(NSString*) accountNumber;
+- (BankAccountEntity*) CreateNewAccount:(NSString*) accountNumber;
+- (BankAccountEntity*) openNewAccounntWithAccountNumber:(NSString*) accountNumber;
+- (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money;
+- (BankAccountEntity*) getTimeStampWhenDepositAndSaveToDB:(BankAccountEntity*) entity;
 @end

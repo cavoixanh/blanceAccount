@@ -43,7 +43,7 @@
     STAssertEquals(numberOfStach, @6, @"push more an Object");
     
     StackClass *stack3 = [[StackClass alloc] init];
-    NSObject *obj = [stack3 top];
+    NSString *obj = [stack3 top];
     STAssertEquals(obj, nil, @"check Object top nil");
     
 }

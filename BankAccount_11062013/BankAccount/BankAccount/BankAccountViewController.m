@@ -41,4 +41,13 @@
     return entity;
 }
 
+- (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money{
+    BankAccountEntity *entity = [bankAccountDAO deposit:accountNumber withMoney:money];
+    return entity;
+}
+
+- (BankAccountEntity*) getTimeStampWhenDepositAndSaveToDB:(BankAccountEntity*) entity{
+    
+}
+
 @end

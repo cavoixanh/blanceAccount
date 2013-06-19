@@ -37,8 +37,9 @@
     [stackManager addObject:anObject];
 }
 
--(NSObject*)top{
-    NSObject * lastObj = [stackManager lastObject];
+-(NSString*)top{
+    NSString * lastObj = [stackManager lastObject];
+    //lastObj = @"aa";
     return lastObj;
 }
 @end

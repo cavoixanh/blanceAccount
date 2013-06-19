@@ -14,5 +14,5 @@
 
 - (void)addMoreObject:(NSString*) anObject;
 - (id)initWithKObject:(NSInteger)k;
-- (NSObject*)top;
+- (NSString*)top;
 @end

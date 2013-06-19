@@ -12,4 +12,5 @@
 
 -(BankAccountEntity*) insertAccountToDB:(BankAccountEntity*) entity;
 -(BankAccountEntity*) getInformation:(NSString*) accountNumber;
+- (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money;
 @end

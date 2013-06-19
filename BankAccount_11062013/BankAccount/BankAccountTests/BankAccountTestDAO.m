@@ -57,12 +57,32 @@ SPEC_BEGIN(BankAccountTestDAO){
             it(@"get information", ^{
                 NSString * accountNumberMock = [NSString nullMock];
                 BankAccountEntity * entityMock = [BankAccountEntity nullMock];
-                BankAccountEntity * expect;
+                BankAccountEntity * expect  = [[BankAccountEntity alloc] init];
                 
-                [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:entityMock];
+                [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
                 expect = [viewCotroller getInfo:accountNumberMock];
-                //[[expect should] equal:entityMock];
+                [[expect should] equal:entityMock];
             });
+            
+            it(@"deposit account", ^{
+                NSString * accountNumberMock = [NSString nullMock];
+                NSNumber * money = [NSNumber nullMock];
+                BankAccountEntity * entityMock = [BankAccountEntity nullMock];
+                BankAccountEntity *expect;
+                
+                [daoMock stub:@selector(deposit:withMoney:) andReturn:entityMock withArguments:accountNumberMock,money];
+                expect = [viewCotroller deposit:accountNumberMock withMoney:money];
+                [[expect should] equal:entityMock];
+                
+                
+            });
+            
+            it(@"get timestamp when deposit", ^{
+                
+            
+            });
+            
+            
         });
     });
 
