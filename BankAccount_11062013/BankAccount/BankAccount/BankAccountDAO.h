@@ -10,7 +10,9 @@
 #import "BankAccountEntity.h"
 @interface BankAccountDAO : NSObject
 
--(BankAccountEntity*) insertAccountToDB:(BankAccountEntity*) entity;
--(BankAccountEntity*) getInformation:(NSString*) accountNumber;
+- (BankAccountEntity*) insertAccountToDB:(BankAccountEntity*) entity;
+- (BankAccountEntity*) getInformation:(NSString*) accountNumber;
 - (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money;
+- (BankAccountEntity*) saveTimeStampWhenDepositToDB:(BankAccountEntity*) entity;
+- (BankAccountEntity*) getTimeStampWhenDeposit:(BankAccountEntity*) entity;
 @end

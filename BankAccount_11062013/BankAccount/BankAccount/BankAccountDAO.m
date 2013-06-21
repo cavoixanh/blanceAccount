@@ -29,4 +29,9 @@
 
     return nil;
 }
+
+- (BankAccountEntity*) getTimeStampWhenDeposit:(BankAccountEntity*) entity{
+    
+    return nil;
+}
 @end
