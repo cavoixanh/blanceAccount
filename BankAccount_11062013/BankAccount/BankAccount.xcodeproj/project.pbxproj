@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BDF9F461775821600D22108 /* WithdrawEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF9F451775821600D22108 /* WithdrawEntity.m */; };
 		5BE6D82B17670032002A67D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82A17670032002A67D0 /* UIKit.framework */; };
 		5BE6D82D17670032002A67D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82C17670032002A67D0 /* Foundation.framework */; };
 		5BE6D82F17670032002A67D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82E17670032002A67D0 /* CoreGraphics.framework */; };
@@ -129,6 +130,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BDF9F441775821600D22108 /* WithdrawEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawEntity.h; sourceTree = "<group>"; };
+		5BDF9F451775821600D22108 /* WithdrawEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawEntity.m; sourceTree = "<group>"; };
 		5BE6D82717670032002A67D0 /* BankAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE6D82A17670032002A67D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BE6D82C17670032002A67D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -435,6 +438,8 @@
 				5BE6D83C17670032002A67D0 /* Default.png */,
 				5BE6D83E17670032002A67D0 /* Default@2x.png */,
 				5BE6D84017670032002A67D0 /* Default-568h@2x.png */,
+				5BDF9F441775821600D22108 /* WithdrawEntity.h */,
+				5BDF9F451775821600D22108 /* WithdrawEntity.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -794,6 +799,7 @@
 				5BE6D9C017670C89002A67D0 /* FMDatabasePool.m in Sources */,
 				5BE6D9C117670C89002A67D0 /* FMDatabaseQueue.m in Sources */,
 				5BE6D9C217670C89002A67D0 /* FMResultSet.m in Sources */,
+				5BDF9F461775821600D22108 /* WithdrawEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1062,7 @@
 				5BE6D86117670033002A67D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BE6D86217670033002A67D0 /* Build configuration list for PBXNativeTarget "BankAccountTests" */ = {
 			isa = XCConfigurationList;
@@ -1064,6 +1071,7 @@
 				5BE6D86417670033002A67D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,4 +13,5 @@
 @property(nonatomic, strong) NSString * accountNumber;
 @property(nonatomic, strong) NSNumber * balance;
 @property(nonatomic, strong) NSString * openTimestamp;
+@property(nonatomic, strong) NSNumber * amount;
 @end

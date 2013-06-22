@@ -8,6 +8,7 @@
 
 #import "BankAccountDAO.h"
 #import "BankAccountEntity.h"
+#import "WithdrawEntity.h"
 @implementation BankAccountDAO
 
 -(BankAccountEntity*) insertAccountToDB:(BankAccountEntity*) entity{
@@ -32,6 +33,16 @@
 
 - (BankAccountEntity*) getTimeStampWhenDeposit:(BankAccountEntity*) entity{
     
+    return nil;
+}
+
+- (BankAccountEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw {
+    
+    return nil;
+}
+
+- (WithdrawEntity*) saveInforWithdraw:(WithdrawEntity*)entity{
+
     return nil;
 }
 @end

@@ -9,6 +9,7 @@
 #import "BankAccountViewController.h"
 #import "BankAccountEntity.h"
 #import "BankAccountDAO.h"
+#import "WithdrawEntity.h"
 @interface BankAccountViewController ()
 
 @end
@@ -52,4 +53,22 @@
     return entity;
 }
 
+- (BankAccountEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw {
+    BankAccountEntity *entity = [bankAccountDAO getInformation:accountNumber];
+    double money =  [entity.balance doubleValue] - [moneyWithdraw doubleValue];
+    entity.balance = [NSNumber numberWithDouble:money];
+    entity.amount  = moneyWithdraw;
+    
+    //WithdrawEntity *withEntity = [self saveInforWithdraw:entity];
+    return entity;
+}
+
+- (WithdrawEntity*) saveInforWithdraw:(BankAccountEntity*)entity{
+
+    WithdrawEntity *withEntity;
+    withEntity.accountNumber = entity.accountNumber;
+    withEntity.amount = entity.amount;
+    withEntity = [bankAccountDAO saveInforWithdraw:withEntity];
+    return withEntity;
+}
 @end

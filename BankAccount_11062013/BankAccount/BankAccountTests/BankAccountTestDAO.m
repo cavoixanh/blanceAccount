@@ -9,6 +9,7 @@
 #import "Kiwi.h"
 #import "BankAccountDAO.h"
 #import "BankAccountEntity.h"
+#import "WithdrawEntity.h"
 #import "BankAccountViewController.h"
 
 SPEC_BEGIN(BankAccountTestDAO){
@@ -94,8 +95,26 @@ SPEC_BEGIN(BankAccountTestDAO){
                 BankAccountEntity *entityMock = [BankAccountEntity nullMock];
                 BankAccountEntity *expect;
                 
-                
+                [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
+                entityMock = [viewCotroller withdraw:accountNumberMock withMoney:moneyWidraw];
+                expect = [viewCotroller withdraw:accountNumberMock withMoney:moneyWidraw];
+                [[expect should] equal:entityMock];
+             });
             
+            it(@"save amount, timestamp, accountNumber to DB", ^{
+                NSString * accountNumberMock = [NSString nullMock];
+                NSNumber * moneyWidraw = [NSNumber nullMock];
+                BankAccountEntity *entityMock = [BankAccountEntity nullMock];
+                WithdrawEntity * withEntityMock = [WithdrawEntity nullMock];
+                WithdrawEntity *expect;
+                BankAccountEntity *expectBankAccount;
+                
+               [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
+                [daoMock stub:@selector(saveInforWithdraw) andReturn:withEntityMock withArguments:withEntityMock];
+                withEntityMock = [daoMock saveInforWithdraw:withEntityMock];
+            
+                expect = [viewCotroller saveInfoWithdraw:expectBankAccount];
+                [[withEntityMock should] equal:expect];
             });
         });
     });
