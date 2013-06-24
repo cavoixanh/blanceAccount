@@ -103,17 +103,15 @@ SPEC_BEGIN(BankAccountTestDAO){
             
             it(@"save amount, timestamp, accountNumber to DB", ^{
                 NSString * accountNumberMock = [NSString nullMock];
-                NSNumber * moneyWidraw = [NSNumber nullMock];
                 BankAccountEntity *entityMock = [BankAccountEntity nullMock];
                 WithdrawEntity * withEntityMock = [WithdrawEntity nullMock];
                 WithdrawEntity *expect;
-                BankAccountEntity *expectBankAccount;
                 
                [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
-                [daoMock stub:@selector(saveInforWithdraw) andReturn:withEntityMock withArguments:withEntityMock];
-                withEntityMock = [daoMock saveInforWithdraw:withEntityMock];
+               [daoMock stub:@selector(saveInforWithdraw:) andReturn:withEntityMock withArguments:withEntityMock];
+                withEntityMock = [viewCotroller saveInforWithdraw:entityMock];
             
-                expect = [viewCotroller saveInfoWithdraw:expectBankAccount];
+                expect = [viewCotroller saveInforWithdraw:entityMock];
                 [[withEntityMock should] equal:expect];
             });
         });

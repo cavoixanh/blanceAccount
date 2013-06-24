@@ -17,5 +17,5 @@
 - (BankAccountEntity*) saveTimeStampWhenDepositToDB:(BankAccountEntity*) entity;
 - (BankAccountEntity*) getTimeStampWhenDeposit:(BankAccountEntity*) entity;
 - (BankAccountEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw;
-- (WithdrawEntity*)    saveInforWithdraw:(WithdrawEntity*)entity;
+- (WithdrawEntity*) saveInforWithdraw:(WithdrawEntity*)entity;
 @end

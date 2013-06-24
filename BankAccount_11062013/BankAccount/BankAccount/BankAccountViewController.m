@@ -65,7 +65,7 @@
 
 - (WithdrawEntity*) saveInforWithdraw:(BankAccountEntity*)entity{
 
-    WithdrawEntity *withEntity;
+    WithdrawEntity *withEntity = [[WithdrawEntity alloc]init];
     withEntity.accountNumber = entity.accountNumber;
     withEntity.amount = entity.amount;
     withEntity = [bankAccountDAO saveInforWithdraw:withEntity];
