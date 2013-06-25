@@ -47,10 +47,10 @@ SPEC_BEGIN(BankAccountTestDAO){
             
             it(@"test balance equal 0", ^{
                 NSString * accountNumberMock = [NSString nullMock];
-                BankAccountEntity * entityMock = [BankAccountEntity nullMock];
+                //BankAccountEntity * entityMock = [BankAccountEntity nullMock];
                 BankAccountEntity * expect ;
                 
-                [daoMock stub:@selector(insertAccountToDB:) andReturn:entityMock withArguments:entityMock];
+                //[daoMock stub:@selector(insertAccountToDB:) andReturn:entityMock withArguments:entityMock];
                 expect = [viewCotroller openNewAccounntWithAccountNumber:accountNumberMock];
                 [[expect.balance should] equal:@0];
              });
@@ -67,13 +67,20 @@ SPEC_BEGIN(BankAccountTestDAO){
             
             it(@"deposit account", ^{
                 NSString * accountNumberMock = [NSString nullMock];
-                NSNumber * money = [NSNumber nullMock];
-                BankAccountEntity * entityMock = [BankAccountEntity nullMock];
-                BankAccountEntity *expect;
+                NSNumber * money = @10;
+                BankAccountEntity * entityMock = [[BankAccountEntity alloc] init];
+                BankAccountEntity * beforeDeposit = [[BankAccountEntity alloc] init];
                 
                 [daoMock stub:@selector(deposit:withMoney:) andReturn:entityMock withArguments:accountNumberMock,money];
-                expect = [viewCotroller deposit:accountNumberMock withMoney:money];
-                //[[expect should] equal:entityMock];
+                [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
+                [daoMock stub:@selector(getTimeStampWhenDeposit:) andReturn:entityMock withArguments:entityMock];
+                
+                beforeDeposit = [viewCotroller getInfo:accountNumberMock];
+                entityMock = [viewCotroller deposit:accountNumberMock withMoney:money];
+                
+                double deposit = [entityMock.balance doubleValue] - [beforeDeposit.balance doubleValue];
+                [[[NSNumber numberWithDouble:deposit] should] equal:money];
+                
             });
             
             it(@"get timestamp when deposit", ^{
@@ -91,14 +98,14 @@ SPEC_BEGIN(BankAccountTestDAO){
             
             it(@"withdraw money", ^{
                 NSString * accountNumberMock = [NSString nullMock];
-                NSNumber * moneyWidraw = [NSNumber nullMock];
-                BankAccountEntity *entityMock = [BankAccountEntity nullMock];
-                BankAccountEntity *expect;
+                NSNumber * moneyWidraw = @10;
+                BankAccountEntity *entityMock = [[BankAccountEntity alloc] init];
                 
                 [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
+                entityMock = [viewCotroller getInfo:accountNumberMock];
                 entityMock = [viewCotroller withdraw:accountNumberMock withMoney:moneyWidraw];
-                expect = [viewCotroller withdraw:accountNumberMock withMoney:moneyWidraw];
-                [[expect should] equal:entityMock];
+                
+                [[moneyWidraw should] equal:entityMock.amount];
              });
             
             it(@"save amount, timestamp, accountNumber to DB", ^{

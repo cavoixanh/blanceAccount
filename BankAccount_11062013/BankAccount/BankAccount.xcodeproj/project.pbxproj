@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BADBF4917797DD500700814 /* TransactionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BADBF4817797DD500700814 /* TransactionEntity.m */; };
 		5BDF9F461775821600D22108 /* WithdrawEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDF9F451775821600D22108 /* WithdrawEntity.m */; };
 		5BE6D82B17670032002A67D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82A17670032002A67D0 /* UIKit.framework */; };
 		5BE6D82D17670032002A67D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82C17670032002A67D0 /* Foundation.framework */; };
@@ -130,6 +131,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BADBF4717797DD500700814 /* TransactionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionEntity.h; sourceTree = "<group>"; };
+		5BADBF4817797DD500700814 /* TransactionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionEntity.m; sourceTree = "<group>"; };
 		5BDF9F441775821600D22108 /* WithdrawEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawEntity.h; sourceTree = "<group>"; };
 		5BDF9F451775821600D22108 /* WithdrawEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawEntity.m; sourceTree = "<group>"; };
 		5BE6D82717670032002A67D0 /* BankAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -440,6 +443,8 @@
 				5BE6D84017670032002A67D0 /* Default-568h@2x.png */,
 				5BDF9F441775821600D22108 /* WithdrawEntity.h */,
 				5BDF9F451775821600D22108 /* WithdrawEntity.m */,
+				5BADBF4717797DD500700814 /* TransactionEntity.h */,
+				5BADBF4817797DD500700814 /* TransactionEntity.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -800,6 +805,7 @@
 				5BE6D9C117670C89002A67D0 /* FMDatabaseQueue.m in Sources */,
 				5BE6D9C217670C89002A67D0 /* FMResultSet.m in Sources */,
 				5BDF9F461775821600D22108 /* WithdrawEntity.m in Sources */,
+				5BADBF4917797DD500700814 /* TransactionEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
