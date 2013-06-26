@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BankAccountDAO.h"
 #import "BankAccountEntity.h"
-
+#import "TransactionEntity.h"
 @interface BankAccountViewController : UIViewController
 
 @property(nonatomic, strong) BankAccountDAO *bankAccountDAO;
@@ -18,10 +18,10 @@
 - (BankAccountEntity*) getInfo:(NSString*) accountNumber;
 - (BankAccountEntity*) CreateNewAccount:(NSString*) accountNumber;
 - (BankAccountEntity*) openNewAccounntWithAccountNumber:(NSString*) accountNumber;
-- (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money;
-- (BankAccountEntity*) getTimeStampWhenDepositAndSaveToDB:(BankAccountEntity*) entity;
-- (BankAccountEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw;
-- (WithdrawEntity*) saveInforWithdraw:(BankAccountEntity*)entity;
+- (TransactionEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money;
+- (TransactionEntity*) getTimeStampWhenDepositAndSaveToDB:(BankAccountEntity*) entity;
+- (TransactionEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw;
+- (TransactionEntity*) saveInforWithdraw:(TransactionEntity*)entity;
 @end
 
 

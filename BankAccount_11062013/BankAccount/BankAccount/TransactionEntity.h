@@ -10,4 +10,9 @@
 
 @interface TransactionEntity : NSObject
 
+@property(nonatomic, strong) NSString *accountNumber;
+@property(nonatomic, strong) NSString *timeStamp;
+@property(nonatomic, strong) NSNumber *amount;
+@property(nonatomic, strong) NSString * description;
+@property(nonatomic) NSInteger type;
 @end

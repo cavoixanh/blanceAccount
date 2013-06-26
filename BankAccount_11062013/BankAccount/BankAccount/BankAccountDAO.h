@@ -9,14 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "BankAccountEntity.h"
 #import "WithdrawEntity.h"
+#import "TransactionEntity.h"
 @interface BankAccountDAO : NSObject
 
 - (BankAccountEntity*) insertAccountToDB:(BankAccountEntity*) entity;
 - (BankAccountEntity*) getInformation:(NSString*) accountNumber;
-- (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money;
+- (TransactionEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money;
 - (BankAccountEntity*) saveTimeStampWhenDepositToDB:(BankAccountEntity*) entity;
-- (BankAccountEntity*) getTimeStampWhenDeposit:(BankAccountEntity*) entity;
+- (TransactionEntity*) getTimeStampWhenDeposit:(BankAccountEntity*) entity;
 - (BankAccountEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw;
-- (WithdrawEntity*) saveInforWithdraw:(WithdrawEntity*)entity;
+- (TransactionEntity*) saveInforWithdraw:(TransactionEntity*)entity;
 
 @end

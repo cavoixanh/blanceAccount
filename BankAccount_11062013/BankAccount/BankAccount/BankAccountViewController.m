@@ -10,6 +10,7 @@
 #import "BankAccountEntity.h"
 #import "BankAccountDAO.h"
 #import "WithdrawEntity.h"
+#import "TransactionEntity.h"
 @interface BankAccountViewController ()
 
 @end
@@ -42,34 +43,32 @@
     return entity;
 }
 
-- (BankAccountEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money{
-    BankAccountEntity *entity ;
-    entity = [self getInfo:accountNumber];
-    double newBlance = [entity.balance doubleValue] + [money doubleValue];
-    entity.balance = [NSNumber numberWithDouble:newBlance];
-    entity = [bankAccountDAO deposit:accountNumber withMoney:money];
-    entity = [self getTimeStampWhenDepositAndSaveToDB:entity];
-    return entity;
-}
-
-- (BankAccountEntity*) getTimeStampWhenDepositAndSaveToDB:(BankAccountEntity*) entity{
-    entity = [bankAccountDAO getTimeStampWhenDeposit:entity];
-    return entity;
-}
-
-- (BankAccountEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw {
-    BankAccountEntity *entity = [bankAccountDAO getInformation:accountNumber];
-    double money =  [entity.balance doubleValue] - [moneyWithdraw doubleValue];
-    entity.balance = [NSNumber numberWithDouble:money];
-    entity.amount  = moneyWithdraw;
+- (TransactionEntity*) deposit:(NSString*) accountNumber withMoney:(NSNumber*) money{
+   
+    TransactionEntity *transactionEntity = [[TransactionEntity alloc] init];
+    transactionEntity = [bankAccountDAO deposit:accountNumber withMoney:money];
+    transactionEntity.amount = money;
     
-    //WithdrawEntity *withEntity = [self saveInforWithdraw:entity];
+    return transactionEntity;
+}
+
+- (TransactionEntity*) getTimeStampWhenDepositAndSaveToDB:(BankAccountEntity*) entity{
+    TransactionEntity * entity1 = [[TransactionEntity alloc] init];
+    entity1 = [bankAccountDAO getTimeStampWhenDeposit:entity];
+    return entity1;
+}
+
+- (TransactionEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw {
+    TransactionEntity *entity = [[TransactionEntity alloc] init];
+    entity.amount = moneyWithdraw;
+    entity = [self saveInforWithdraw:entity];
+    
     return entity;
 }
 
-- (WithdrawEntity*) saveInforWithdraw:(BankAccountEntity*)entity{
+- (TransactionEntity*) saveInforWithdraw:(TransactionEntity*)entity{
 
-    WithdrawEntity *withEntity = [[WithdrawEntity alloc]init];
+    TransactionEntity *withEntity = [[TransactionEntity alloc]init];
     withEntity.accountNumber = entity.accountNumber;
     withEntity.amount = entity.amount;
     withEntity = [bankAccountDAO saveInforWithdraw:withEntity];
