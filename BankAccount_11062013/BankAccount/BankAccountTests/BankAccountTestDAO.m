@@ -125,7 +125,7 @@ SPEC_BEGIN(BankAccountTestDAO){
                 KWCaptureSpy *spy = [daoMock captureArgument:@selector(getTransactionInRangeFromDB:::) atIndex:0];
                 KWCaptureSpy *spy1 = [daoMock captureArgument:@selector(getTransactionInRangeFromDB:::) atIndex:1];
                 KWCaptureSpy *spy2 = [daoMock captureArgument:@selector(getTransactionInRangeFromDB:::) atIndex:2];
-                [viewCotroller getTransaction:accountNumber];
+                [viewCotroller getTransactionInRange:accountNumber :startDate :endDate];
                 [[accountNumber should] equal:spy.argument];
                 [[startDate should] equal:spy1.argument];
                 [[endDate should] equal:spy2.argument];
