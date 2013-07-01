@@ -22,6 +22,9 @@
 - (TransactionEntity*) getTimeStampWhenDepositAndSaveToDB:(BankAccountEntity*) entity;
 - (TransactionEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw;
 - (TransactionEntity*) saveInforWithdraw:(TransactionEntity*)entity;
+-(BOOL) getTransaction:(NSNumber*)accountNumber;
+-(BOOL) getTransactionInRange:(NSNumber*)accountNumber :(NSDate *) startDate :(NSDate *) endDate;
+-(BOOL) getNTransaction:(NSNumber*)accountNumber :(NSNumber*) n;
 @end
 
 

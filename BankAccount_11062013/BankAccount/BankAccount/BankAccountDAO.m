@@ -37,13 +37,28 @@
     return nil;
 }
 
-- (BankAccountEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw {
+- (TransactionEntity*) insertTransactionWithDrawIntoDB:(TransactionEntity*)entity {
     
     return nil;
 }
 
 - (TransactionEntity*) saveInforWithdraw:(TransactionEntity*)entity{
 
+    return nil;
+}
+
+- (BOOL)updateAccount:(BankAccountEntity*) entity{
+    
+    return TRUE;
+}
+
+- (NSArray*)getTransactionFromDB:(NSNumber*) accountNumber{
+    return nil;
+}
+- (NSArray*)getTransactionInRangeFromDB:(NSNumber*) accountNumber :(NSDate*) startDate :(NSDate *) endDate{
+    return nil;
+}
+- (NSArray*)getNTransactionFromDB:(NSNumber*) accountNumber :(NSNumber*) n{
     return nil;
 }
 @end

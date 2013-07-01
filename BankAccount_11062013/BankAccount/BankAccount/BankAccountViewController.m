@@ -59,11 +59,19 @@
 }
 
 - (TransactionEntity*) withdraw:(NSString*)accountNumber withMoney:(NSNumber*) moneyWithdraw {
-    TransactionEntity *entity = [[TransactionEntity alloc] init];
-    entity.amount = moneyWithdraw;
-    entity = [self saveInforWithdraw:entity];
+    BankAccountEntity * accountBeforeWithdraw = [self getInfo:accountNumber];
+    TransactionEntity * transactionWhenWithdraw = [[TransactionEntity alloc] init];
+    if(accountBeforeWithdraw){
+        accountBeforeWithdraw.balance = @(accountBeforeWithdraw.balance.doubleValue - moneyWithdraw.doubleValue);
+        [bankAccountDAO updateAccount:accountBeforeWithdraw];
+        
+        transactionWhenWithdraw.amount = moneyWithdraw;
+        transactionWhenWithdraw.timeStamp = [NSDate date];
+        transactionWhenWithdraw.accountNumber = accountNumber;
+        transactionWhenWithdraw =  [bankAccountDAO insertTransactionWithDrawIntoDB:transactionWhenWithdraw];
+    }
     
-    return entity;
+    return transactionWhenWithdraw;
 }
 
 - (TransactionEntity*) saveInforWithdraw:(TransactionEntity*)entity{
@@ -74,4 +82,30 @@
     withEntity = [bankAccountDAO saveInforWithdraw:withEntity];
     return withEntity;
 }
+
+-(BOOL) getTransaction:(NSNumber*)accountNumber{
+    NSArray *listTransaction;
+    listTransaction = [bankAccountDAO getTransactionFromDB:accountNumber];
+    if(listTransaction)
+        return TRUE;
+    else return FALSE;
+}
+-(BOOL) getTransactionInRange:(NSNumber*)accountNumber :(NSDate *) startDate :(NSDate *) endDate{
+    NSArray *listTransaction;
+    listTransaction = [bankAccountDAO getTransactionInRangeFromDB:accountNumber :startDate :endDate];
+    if(listTransaction)
+        return TRUE;
+    else
+        return FALSE;
+}
+-(BOOL) getNTransaction:(NSNumber*)accountNumber :(NSNumber*) n{
+    NSArray *listTransaction;
+    listTransaction = [bankAccountDAO getNTransactionFromDB:accountNumber :n];
+    if(listTransaction)
+        return TRUE;
+    else
+        return FALSE;
+
+}
+
 @end

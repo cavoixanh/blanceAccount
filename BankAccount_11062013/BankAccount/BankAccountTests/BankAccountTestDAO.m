@@ -61,6 +61,7 @@ SPEC_BEGIN(BankAccountTestDAO){
                 BankAccountEntity * entityMock = [BankAccountEntity nullMock];
                 BankAccountEntity * expect  = [[BankAccountEntity alloc] init];
                 
+                [[viewCotroller should] receive:@selector(getInfo:) andReturn:entityMock withArguments:accountNumberMock];
                 [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
                 expect = [viewCotroller getInfo:accountNumberMock];
                 [[expect should] equal:entityMock];
@@ -93,28 +94,56 @@ SPEC_BEGIN(BankAccountTestDAO){
             });
             
             it(@"withdraw money", ^{
-                NSString * accountNumberMock = [NSString nullMock];
-                NSNumber * moneyWidraw = [NSNumber nullMock];
-                TransactionEntity * transactionEntity = [[TransactionEntity alloc] init];
-                TransactionEntity *expect;
-                [daoMock stub:@selector(saveInforWithdraw:) andReturn:transactionEntity withArguments:transactionEntity];
-                expect = [viewCotroller withdraw:accountNumberMock withMoney:moneyWidraw];
-                [[moneyWidraw should] equal:expect.amount];
+                
+                NSNumber * moneyWidraw = @10;
+                //NSString * accountNumberMock = [NSString nullMock];
+                BankAccountEntity *account = [[BankAccountEntity alloc] init];
+                TransactionEntity *tranWith = [[TransactionEntity alloc] init];
+                account.balance = @100;
+                NSNumber * balanceBeforeWithdraw = account.balance;
+                [[daoMock should] receive:@selector(insertTransactionWithDrawIntoDB:) andReturn:tranWith withArguments:tranWith];
+                KWCaptureSpy *spy = [daoMock captureArgument:@selector(updateAccount:) atIndex:0];
+                BankAccountEntity * accountAfterWith = spy.argument;
+                [[accountAfterWith.balance should] equal:(@(balanceBeforeWithdraw.doubleValue - moneyWidraw.doubleValue))];
+                
              });
-            
-            it(@"save amount, timestamp, accountNumber to DB", ^{
-//                NSString * accountNumberMock = [NSString nullMock];
-//                BankAccountEntity *entityMock = [BankAccountEntity nullMock];
-//                WithdrawEntity * withEntityMock = [[WithdrawEntity alloc] init];
-//                WithdrawEntity *expect;
-//                
-//               [daoMock stub:@selector(getInformation:) andReturn:entityMock withArguments:accountNumberMock];
-//               [daoMock stub:@selector(saveInforWithdraw:) andReturn:withEntityMock withArguments:withEntityMock];
-//                [viewCotroller saveInforWithdraw:withEntityMock];
-//            
-//                expect = [viewCotroller saveInforWithdraw:withEntityMock];
-//                [[withEntityMock should] equal:expect.amount];
+            it(@"lis transactions", ^{
+                NSNumber *accountNumber = @123456789;
+                NSArray *listTransactionMock = [[NSArray alloc] init];
+                [[daoMock should] receive:@selector(getTransactionFromDB:) andReturn:listTransactionMock withArguments:accountNumber];
+                KWCaptureSpy *spy = [daoMock captureArgument:@selector(getTransactionFromDB:) atIndex:0];
+                [viewCotroller getTransaction:accountNumber];
+                [[accountNumber should] equal:spy.argument];
             });
+            
+            it(@"list transactions in range", ^{
+                NSNumber *accountNumber = @123456789;
+                NSDate  *startDate = [NSDate nullMock];
+                NSDate  *endDate = [NSDate nullMock];
+                NSArray *listTransaction = [NSArray nullMock];
+                [[daoMock should] receive:@selector(getTransactionInRangeFromDB:::) andReturn:listTransaction withArguments:accountNumber,startDate,endDate];
+                KWCaptureSpy *spy = [daoMock captureArgument:@selector(getTransactionInRangeFromDB:::) atIndex:0];
+                KWCaptureSpy *spy1 = [daoMock captureArgument:@selector(getTransactionInRangeFromDB:::) atIndex:1];
+                KWCaptureSpy *spy2 = [daoMock captureArgument:@selector(getTransactionInRangeFromDB:::) atIndex:2];
+                [viewCotroller getTransaction:accountNumber];
+                [[accountNumber should] equal:spy.argument];
+                [[startDate should] equal:spy1.argument];
+                [[endDate should] equal:spy2.argument];
+            });
+            
+            it(@"get n transaction which newest", ^{
+                NSNumber *accountNumber = @123456;
+                NSNumber *n = @10;
+                
+                NSArray *listTransaction = [NSArray nullMock];
+                [[daoMock should] receive:@selector(getNTransactionFromDB::) andReturn:listTransaction withArguments:accountNumber,n];
+                KWCaptureSpy *spy = [daoMock captureArgument:@selector(getNTransactionFromDB::) atIndex:0];
+                KWCaptureSpy *spy1 = [daoMock captureArgument:@selector(getNTransactionFromDB::) atIndex:1];
+                [viewCotroller getNTransaction:accountNumber :n];
+                [[accountNumber should] equal:spy.argument];
+                [[n should] equal:spy1.argument];
+            });
+
         });
     });
 
