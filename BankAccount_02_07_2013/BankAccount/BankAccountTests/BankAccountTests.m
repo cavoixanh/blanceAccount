@@ -2,45 +2,43 @@
 //  BankAccountTests.m
 //  BankAccountTests
 //
-//  Created by Truong Tran  The on 7/2/13.
+//  Created by Truong Tran  The on 6/11/13.
 //  Copyright (c) 2013 Thett. All rights reserved.
 //
 
 #import "BankAccountTests.h"
-#import "BankAccount.h"
+#import "BankAccountEntity.h"
 #import "BankAccountDAO.h"
-#import "ViewController.h"
-#import "Kiwi.h"
+#import "BankAccountViewController.h"
 
-SPEC_BEGIN(BankAccountTests){
-    describe(@"test bank account", ^{
-        
-            __block ViewController  * view;
-            __block BankAccountDAO * accountDAO;
-            __block BankAccount    * accountentity;
-            beforeAll(^{
-                view = [[ViewController alloc] init];
-                accountDAO = [[BankAccountDAO alloc] init];
-                accountentity = [[BankAccount alloc] init];
-            });
-            afterAll(^{
-                accountDAO = nil;
-            });
-        
-        context(@"", ^{
-            it(@"1. open Account with AccountNumber: balance = 0", ^{
-                NSString * accountNumber = @"123456789";
-                BankAccount *expectAccount = [[BankAccount alloc] init];
-                [accountDAO stub:@selector(insertNewAccount:) andReturn:accountentity withArguments:accountentity];
-                KWCaptureSpy *spy = [KWCaptureSpy captureArgument:@selector(insertNewAccount:) atIndex:0];
-                accountentity = [view openAccountWithNumber:accountNumber];
-                
-                expectAccount = spy.argument;
-                [[expectAccount.balance should] equal:@0];
-                [[expectAccount should] equal:accountentity];
-            });
+SPEC_BEGIN(BankAccountTest)
+describe(@"Test bank account", ^{
+    __block  BankAccountDAO *dao;
+    __block  BankAccountViewController *view;
+    beforeAll(^{
+        dao = [[BankAccountDAO alloc] init];
+        view = [[BankAccountViewController alloc] init];
+    });
+    afterAll(^{
+        dao = nil;
+    });
+    
+    context(@"", ^{
+        it(@"open Account ", ^{
+            BankAccountEntity *entity = [[BankAccountEntity alloc] init];
+            NSString * accountNumber = @"123456789";
+            [dao stub:@selector(insertNewAccountToDB:) andReturn:entity withArguments:entity];
+            [view openAccountWithAccountNumber: accountNumber];
+            KWCaptureSpy *spy = [dao captureArgument:@selector(insertNewAccountToDB:) atIndex:0];
+            entity = spy.argument;
+            [[entity.accountNumber should] equal:accountNumber];
+            [[entity.balance should] equal:@0];
+           
         });
     });
-}
+});
+
 
 SPEC_END
+
+

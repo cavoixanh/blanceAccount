@@ -2,12 +2,12 @@
 //  BankAccountTests.h
 //  BankAccountTests
 //
-//  Created by Truong Tran  The on 7/2/13.
+//  Created by Truong Tran  The on 6/11/13.
 //  Copyright (c) 2013 Thett. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-
+#import "Kiwi.h"
 @interface BankAccountTests : SenTestCase
 
 @end

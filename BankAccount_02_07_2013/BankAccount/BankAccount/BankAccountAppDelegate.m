@@ -1,22 +1,22 @@
 //
-//  AppDelegate.m
+//  BankAccountAppDelegate.m
 //  BankAccount
 //
-//  Created by Truong Tran  The on 7/2/13.
+//  Created by Truong Tran  The on 6/11/13.
 //  Copyright (c) 2013 Thett. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "BankAccountAppDelegate.h"
 
-#import "ViewController.h"
+#import "BankAccountViewController.h"
 
-@implementation AppDelegate
+@implementation BankAccountAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.viewController = [[BankAccountViewController alloc] initWithNibName:@"BankAccountViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

@@ -2,7 +2,7 @@
 //  BankAccountDAO.m
 //  BankAccount
 //
-//  Created by Truong Tran  The on 7/2/13.
+//  Created by Truong Tran  The on 7/3/13.
 //  Copyright (c) 2013 Thett. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @implementation BankAccountDAO
 
--(BankAccount*) insertNewAccount:(BankAccount*) entity{
+-(BankAccountEntity*) insertNewAccountToDB:(BankAccountEntity*) entity{
     return nil;
 }
 @end

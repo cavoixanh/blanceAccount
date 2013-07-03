@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5B0186B21782ACC500CB4B28"
+               BlueprintIdentifier = "5BE6D82617670031002A67D0"
                BuildableName = "BankAccount.app"
                BlueprintName = "BankAccount"
                ReferencedContainer = "container:BankAccount.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5B0186D81782ACC500CB4B28"
+               BlueprintIdentifier = "5BE6D84C17670032002A67D0"
                BuildableName = "BankAccountTests.octest"
                BlueprintName = "BankAccountTests"
                ReferencedContainer = "container:BankAccount.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5B0186B21782ACC500CB4B28"
+            BlueprintIdentifier = "5BE6D82617670031002A67D0"
             BuildableName = "BankAccount.app"
             BlueprintName = "BankAccount"
             ReferencedContainer = "container:BankAccount.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5B0186B21782ACC500CB4B28"
+            BlueprintIdentifier = "5BE6D82617670031002A67D0"
             BuildableName = "BankAccount.app"
             BlueprintName = "BankAccount"
             ReferencedContainer = "container:BankAccount.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5B0186B21782ACC500CB4B28"
+            BlueprintIdentifier = "5BE6D82617670031002A67D0"
             BuildableName = "BankAccount.app"
             BlueprintName = "BankAccount"
             ReferencedContainer = "container:BankAccount.xcodeproj">
