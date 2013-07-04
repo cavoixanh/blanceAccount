@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BankAccountEntity.h"
+#import "TransactionEntity.h"
 @interface BankAccountViewController : UIViewController
 
 -(void) openAccountWithAccountNumber:(NSString*) accountNumber;
+-(BankAccountEntity*) getAccountWithAccountNumber:(NSString *) accountNumber;
+-(void) DepositMoney:(NSString*) accountNumber : (NSNumber *) money;
 @end
 
 

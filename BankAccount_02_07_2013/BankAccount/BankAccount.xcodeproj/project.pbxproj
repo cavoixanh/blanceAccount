@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B1BD142178401FC00C062ED /* BankAccountEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BD141178401FC00C062ED /* BankAccountEntity.m */; };
 		5B1BD1461784029C00C062ED /* BankAccountDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1BD1451784029C00C062ED /* BankAccountDAO.m */; };
+		5B2237A9178551C000108B3B /* TransactionEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2237A8178551C000108B3B /* TransactionEntity.m */; };
 		5BE6D82B17670032002A67D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82A17670032002A67D0 /* UIKit.framework */; };
 		5BE6D82D17670032002A67D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82C17670032002A67D0 /* Foundation.framework */; };
 		5BE6D82F17670032002A67D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE6D82E17670032002A67D0 /* CoreGraphics.framework */; };
@@ -131,6 +132,8 @@
 		5B1BD141178401FC00C062ED /* BankAccountEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountEntity.m; sourceTree = "<group>"; };
 		5B1BD1441784029C00C062ED /* BankAccountDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankAccountDAO.h; sourceTree = "<group>"; };
 		5B1BD1451784029C00C062ED /* BankAccountDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankAccountDAO.m; sourceTree = "<group>"; };
+		5B2237A7178551C000108B3B /* TransactionEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionEntity.h; sourceTree = "<group>"; };
+		5B2237A8178551C000108B3B /* TransactionEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionEntity.m; sourceTree = "<group>"; };
 		5BE6D82717670032002A67D0 /* BankAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE6D82A17670032002A67D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BE6D82C17670032002A67D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -374,6 +377,8 @@
 			children = (
 				5B1BD140178401FC00C062ED /* BankAccountEntity.h */,
 				5B1BD141178401FC00C062ED /* BankAccountEntity.m */,
+				5B2237A7178551C000108B3B /* TransactionEntity.h */,
+				5B2237A8178551C000108B3B /* TransactionEntity.m */,
 			);
 			name = entity;
 			sourceTree = "<group>";
@@ -800,6 +805,7 @@
 				5BE6D9C217670C89002A67D0 /* FMResultSet.m in Sources */,
 				5B1BD142178401FC00C062ED /* BankAccountEntity.m in Sources */,
 				5B1BD1461784029C00C062ED /* BankAccountDAO.m in Sources */,
+				5B2237A9178551C000108B3B /* TransactionEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

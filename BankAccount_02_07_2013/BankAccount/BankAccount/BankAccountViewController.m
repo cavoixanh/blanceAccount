@@ -29,6 +29,29 @@
     BankAccountEntity *entity = [[BankAccountEntity alloc] init];
     entity.accountNumber = accountNumber;
     entity.balance = @0;
+    entity.openTimeStamp = [NSDate date];
     [dao insertNewAccountToDB:entity];
 }
+
+-(BankAccountEntity*) getAccountWithAccountNumber:(NSString *) accountNumber{
+    BankAccountEntity *entity = [[BankAccountEntity alloc] init];
+    entity = [dao getAccountFromDB:accountNumber];
+    return entity;
+}
+-(void) DepositMoney:(NSString*) accountNumber : (NSNumber *) money{
+    BankAccountEntity *entity = [dao getAccountFromDB:accountNumber];
+    TransactionEntity *tranEntity = [[TransactionEntity alloc] init];
+    if(entity){
+        entity.balance = @(entity.balance.doubleValue + money.doubleValue);
+        if([dao updateAccountInDB:entity]){
+            tranEntity.accountNumber = accountNumber;
+            tranEntity.amount = money;
+            tranEntity.description = @"";
+            tranEntity.type = @1;
+            [dao insertTransactionInDB:tranEntity];
+        }
+    }
+
+}
+
 @end

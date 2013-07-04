@@ -13,4 +13,14 @@
 -(BankAccountEntity*) insertNewAccountToDB:(BankAccountEntity*) entity{
     return nil;
 }
+-(BankAccountEntity *) getAccountFromDB:(NSString *) accountNumber{
+    return nil;
+}
+-(BOOL) updateAccountInDB:(BankAccountEntity*)entity{
+    return YES;
+}
+-(TransactionEntity *) insertTransactionInDB:(TransactionEntity *) entity{
+    return nil;
+}
+
 @end
