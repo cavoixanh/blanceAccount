@@ -38,7 +38,7 @@
     entity = [dao getAccountFromDB:accountNumber];
     return entity;
 }
--(void) DepositMoney:(NSString*) accountNumber : (NSNumber *) money{
+-(TransactionEntity*) DepositMoney:(NSString*) accountNumber : (NSNumber *) money{
     BankAccountEntity *entity = [dao getAccountFromDB:accountNumber];
     TransactionEntity *tranEntity = [[TransactionEntity alloc] init];
     if(entity){
@@ -51,7 +51,31 @@
             [dao insertTransactionInDB:tranEntity];
         }
     }
-
+    return tranEntity;
 }
 
+-(TransactionEntity*) withdrawMoney:(NSString*) accountNumber :(NSNumber *) money{
+    BankAccountEntity * entity = [dao getAccountFromDB:accountNumber];
+    TransactionEntity *tranEntity = [[TransactionEntity alloc] init];
+    if(entity){
+        entity.balance = @(entity.balance.doubleValue + money.doubleValue);
+        if([dao updateAccountInDB:entity]){
+            tranEntity.accountNumber = accountNumber;
+            tranEntity.amount = money;
+            tranEntity.description = @"";
+            tranEntity.type = @-1;
+            [dao insertTransactionInDB:tranEntity];
+        }
+    }
+    return tranEntity;
+}
+
+-(NSArray*) getListTransactionWithAccountNumber:(NSString *) accountNumber{
+    NSArray * listTransaction = [dao getListTransactionWithAcc:accountNumber];
+    return listTransaction;
+}
+-(NSArray*) getListTransactionWithAccountNumber:(NSString *) accountNumber andStart:(NSDate*)startDate end:(NSDate*)endDate{
+    NSArray * listTransaction = [dao getListTransactionWithAcc:accountNumber andStart:startDate end:endDate];
+    return listTransaction;
+}
 @end

@@ -15,4 +15,6 @@
 -(BankAccountEntity *) getAccountFromDB:(NSString *) accountNumber;
 -(BOOL) updateAccountInDB:(BankAccountEntity*)entity;
 -(TransactionEntity *) insertTransactionInDB:(TransactionEntity *) entity;
+-(NSArray*)getListTransactionWithAcc:(NSString*) accNumber;
+-(NSArray*)getListTransactionWithAcc:(NSString*) accNumber andStart:(NSDate*)startDate end:(NSDate*)endDate;
 @end

@@ -28,7 +28,7 @@ describe(@"Test bank account", ^{
         it(@"open Account ", ^{
             BankAccountEntity *entity = [[BankAccountEntity alloc] init];
             NSString * accountNumber = @"123456789";
-            [dao stub:@selector(insertNewAccountToDB:) andReturn:entity withArguments:entity];
+            [dao stub:@selector(insertNewAccountToDB:) andReturn:entity];
             KWCaptureSpy *spy = [dao captureArgument:@selector(insertNewAccountToDB:) atIndex:0];
             entity = spy.argument;
             [view openAccountWithAccountNumber: accountNumber];
@@ -41,29 +41,81 @@ describe(@"Test bank account", ^{
         it(@"get Account",^{
             BankAccountEntity *entity = [[BankAccountEntity alloc] init];
             NSString * accountNumber = [NSString nullMock];
-            [dao stub:@selector(getAccountFromDB:) andReturn:entity withArguments:accountNumber];
+            [dao stub:@selector(getAccountFromDB:) andReturn:entity ];
             KWCaptureSpy *spy = [dao captureArgument:@selector(getAccountFromDB:) atIndex:0];
+            [view getAccountWithAccountNumber:accountNumber];
             [[accountNumber should] equal:spy.argument];
         });
         
-        it(@"deposit money into account", ^{
+        it(@"deposit money into account and save into db", ^{
             BankAccountEntity * entity = [[BankAccountEntity alloc] init];
             entity.accountNumber = @"123456789";
             entity.balance = @10;
             NSNumber *amount = @5;
             TransactionEntity * trEntity = [[TransactionEntity alloc] init];
-            [dao stub:@selector(getAccountFromDB:) andReturn:entity withArguments:@"123456789"];
-            [dao stub:@selector(updateAccountInDB:) andReturn:@1 withArguments:entity];
-            [dao stub:@selector(insertTransactionInDB:) andReturn:trEntity withArguments:trEntity];
+            TransactionEntity * expect ;
+            [dao stub:@selector(getAccountFromDB:) andReturn:entity withArguments:entity.accountNumber];
+            [dao stub:@selector(updateAccountInDB:) andReturn:@1 ];
+            [dao stub:@selector(insertTransactionInDB:) andReturn:trEntity];
             
             KWCaptureSpy * spy = [dao captureArgument:@selector(updateAccountInDB:) atIndex:0];
             KWCaptureSpy * spy1 = [dao captureArgument:@selector(insertTransactionInDB:) atIndex:0];
             
-            [view DepositMoney:entity.accountNumber :amount];
-            trEntity = spy1.argument;
+            expect = [view DepositMoney:entity.accountNumber :amount];
             [[entity.accountNumber should] equal:spy.argument];
-            [[amount should] equal:trEntity.amount];
             
+            trEntity = spy1.argument;
+            [[expect.amount should] equal:trEntity.amount];
+            
+        });
+        
+        it(@"withdraw money and save into db", ^{
+            BankAccountEntity * entity = [[BankAccountEntity alloc] init];
+            entity.accountNumber = @"123456789";
+            entity.balance = @10;
+            NSNumber *amount = @5;
+            TransactionEntity * trEntity = [[TransactionEntity alloc] init];
+            TransactionEntity * expect ;
+            [dao stub:@selector(getAccountFromDB:) andReturn:entity withArguments:entity.accountNumber];
+            [dao stub:@selector(updateAccountInDB:) andReturn:@1 ];
+            [dao stub:@selector(insertTransactionInDB:) andReturn:trEntity];
+            
+            KWCaptureSpy * spy = [dao captureArgument:@selector(updateAccountInDB:) atIndex:0];
+            KWCaptureSpy * spy1 = [dao captureArgument:@selector(insertTransactionInDB:) atIndex:0];
+            
+            expect = [view withdrawMoney:entity.accountNumber :amount];
+            [[entity.accountNumber should] equal:spy.argument];
+            
+            trEntity = spy1.argument;
+            [[expect.amount should] equal:trEntity.amount];
+
+        });
+        
+        it(@"get list transaction", ^{
+            NSString *accNumber = @"123456789";
+            NSArray * list = [NSArray nullMock];
+            [dao stub:@selector(getListTransactionWithAcc:) andReturn:list];
+            KWCaptureSpy *spy = [dao captureArgument:@selector(getListTransactionWithAcc:) atIndex:0];
+            [view getAccountWithAccountNumber:accNumber];
+            
+            [[accNumber should]equal:spy.argument];
+        });
+        it(@"get list transaction in ranger", ^{
+            NSString *accNumber = @"123456789";
+            NSArray * list = [NSArray nullMock];
+            NSDate *startDate = [NSDate nullMock];
+            NSDate *endDate = [NSDate nullMock];
+            
+            [dao stub:@selector(getListTransactionWithAcc:) andReturn:list];
+            KWCaptureSpy *spy = [dao captureArgument:@selector(getListTransactionWithAccountNumber:andStart:end:) atIndex:0];
+            KWCaptureSpy *spy1 = [dao captureArgument:@selector(getListTransactionWithAccountNumber:andStart:end:) atIndex:1];
+            KWCaptureSpy *spy2 = [dao captureArgument:@selector(getListTransactionWithAccountNumber:andStart:end:) atIndex:2];
+            
+            [view getListTransactionWithAccountNumber:accNumber andStart:startDate end:endDate];
+            
+            [[accNumber should]equal:spy.argument];
+            [[startDate should] equal:spy1.argument];
+            [[endDate should] equal:spy2.argument];
         });
     });
 });

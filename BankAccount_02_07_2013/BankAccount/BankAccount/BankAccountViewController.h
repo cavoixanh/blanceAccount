@@ -13,7 +13,10 @@
 
 -(void) openAccountWithAccountNumber:(NSString*) accountNumber;
 -(BankAccountEntity*) getAccountWithAccountNumber:(NSString *) accountNumber;
--(void) DepositMoney:(NSString*) accountNumber : (NSNumber *) money;
+-(TransactionEntity*) DepositMoney:(NSString*) accountNumber : (NSNumber *) money;
+-(TransactionEntity*) withdrawMoney:(NSString*) accountNumber :(NSNumber *) money;
+-(NSArray*) getListTransactionWithAccountNumber:(NSString *) accountNumber;
+-(NSArray*) getListTransactionWithAccountNumber:(NSString *) accountNumber andStart:(NSDate*)startDate end:(NSDate*)endDate;
 @end
 
 

@@ -22,5 +22,10 @@
 -(TransactionEntity *) insertTransactionInDB:(TransactionEntity *) entity{
     return nil;
 }
-
+-(NSArray*)getListTransactionWithAcc:(NSString*) accNumber{
+    return nil;
+}
+-(NSArray*)getListTransactionWithAcc:(NSString*) accNumber andStart:(NSDate*)startDate end:(NSDate*)endDate{
+    return nil;
+}
 @end
