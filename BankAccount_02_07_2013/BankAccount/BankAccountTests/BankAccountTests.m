@@ -25,8 +25,9 @@ describe(@"Test bank account", ^{
     });
     
     context(@"", ^{
+        
         it(@"open Account ", ^{
-            BankAccountEntity *entity = [[BankAccountEntity alloc] init];
+            BankAccountEntity *entity = [BankAccountEntity nullMock];
             NSString * accountNumber = @"123456789";
             [dao stub:@selector(insertNewAccountToDB:) andReturn:entity];
             KWCaptureSpy *spy = [dao captureArgument:@selector(insertNewAccountToDB:) atIndex:0];
@@ -39,7 +40,7 @@ describe(@"Test bank account", ^{
         });
         
         it(@"get Account",^{
-            BankAccountEntity *entity = [[BankAccountEntity alloc] init];
+            BankAccountEntity *entity = [BankAccountEntity nullMock];
             NSString * accountNumber = [NSString nullMock];
             [dao stub:@selector(getAccountFromDB:) andReturn:entity ];
             KWCaptureSpy *spy = [dao captureArgument:@selector(getAccountFromDB:) atIndex:0];
