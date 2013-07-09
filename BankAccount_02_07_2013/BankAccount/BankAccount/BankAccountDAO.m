@@ -28,4 +28,7 @@
 -(NSArray*)getListTransactionWithAcc:(NSString*) accNumber andStart:(NSDate*)startDate end:(NSDate*)endDate{
     return nil;
 }
+-(NSArray*)getListTransactionWithAcc:(NSString *)accNumber andN:(NSNumber*)number{
+    return nil;
+}
 @end

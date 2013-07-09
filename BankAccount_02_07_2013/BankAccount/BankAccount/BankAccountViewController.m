@@ -78,4 +78,9 @@
     NSArray * listTransaction = [dao getListTransactionWithAcc:accountNumber andStart:startDate end:endDate];
     return listTransaction;
 }
+-(NSArray*) getListTransactionWithAccountNumber:(NSString *)accountNumber andN:(NSNumber*)number{
+    NSArray * listTransaction = [dao getListTransactionWithAcc:accountNumber andN:number];
+    return listTransaction;
+}
+
 @end

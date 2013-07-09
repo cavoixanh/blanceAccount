@@ -17,6 +17,7 @@
 -(TransactionEntity*) withdrawMoney:(NSString*) accountNumber :(NSNumber *) money;
 -(NSArray*) getListTransactionWithAccountNumber:(NSString *) accountNumber;
 -(NSArray*) getListTransactionWithAccountNumber:(NSString *) accountNumber andStart:(NSDate*)startDate end:(NSDate*)endDate;
+-(NSArray*) getListTransactionWithAccountNumber:(NSString *)accountNumber andN:(NSNumber*)number;
 @end
 
 

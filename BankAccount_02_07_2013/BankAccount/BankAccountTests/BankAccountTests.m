@@ -22,9 +22,10 @@ describe(@"Test bank account", ^{
     });
     afterAll(^{
         dao = nil;
+        view = nil;
     });
     
-    context(@"", ^{
+    context(@"tests", ^{
         
         it(@"open Account ", ^{
             BankAccountEntity *entity = [BankAccountEntity nullMock];
@@ -118,10 +119,21 @@ describe(@"Test bank account", ^{
             [[startDate should] equal:spy1.argument];
             [[endDate should] equal:spy2.argument];
         });
+         it(@"get list n transaction", ^{
+             NSString *accNumber = @"123456789";
+             NSNumber * number = @10;
+             NSArray *list = [NSArray nullMock];
+             
+             [dao stub:@selector(getListTransactionWithAcc:andN:) andReturn:list];
+             KWCaptureSpy  *spy = [dao captureArgument:@selector(getListTransactionWithAcc:andN:) atIndex:0];
+             KWCaptureSpy  *spy1 = [dao captureArgument:@selector(getListTransactionWithAcc:andN:) atIndex:1];
+             [view getListTransactionWithAccountNumber:accNumber andN:number];
+             
+             [[accNumber should] equal:spy.argument];
+             [[number should] equal:spy1.argument];
+         });
     });
 });
-
-
 SPEC_END
 
 

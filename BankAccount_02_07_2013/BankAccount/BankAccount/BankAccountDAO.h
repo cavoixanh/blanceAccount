@@ -17,4 +17,5 @@
 -(TransactionEntity *) insertTransactionInDB:(TransactionEntity *) entity;
 -(NSArray*)getListTransactionWithAcc:(NSString*) accNumber;
 -(NSArray*)getListTransactionWithAcc:(NSString*) accNumber andStart:(NSDate*)startDate end:(NSDate*)endDate;
+-(NSArray*)getListTransactionWithAcc:(NSString *)accNumber andN:(NSNumber*)number;
 @end
