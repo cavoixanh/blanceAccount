@@ -46,7 +46,7 @@
         if([dao updateAccountInDB:entity]){
             tranEntity.accountNumber = accountNumber;
             tranEntity.amount = money;
-            tranEntity.description = @"";
+            tranEntity.description = @""; 
             tranEntity.type = @1;
             [dao insertTransactionInDB:tranEntity];
         }
