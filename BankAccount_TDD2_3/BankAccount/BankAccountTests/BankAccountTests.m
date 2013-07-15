@@ -28,6 +28,7 @@ describe(@"Test Bank Acc", ^{
         transactionDAO    = [[TransactionDAO alloc] init];
         transactionEntity = [[TransactionEntity alloc] init];
         view.dao = bankAccountDAO;
+        view.daoTran = transactionDAO;
     });
     
     afterAll(^{
@@ -56,17 +57,45 @@ describe(@"Test Bank Acc", ^{
             [[spy.argument should] equal:accNumber];
         });
         
-        it(@"Deposit money into account", ^{
+        it(@"Deposit money into account and save transaction", ^{
             NSString *accNumber = @"123456789";
             NSNumber *depositMoney = @10;
+            bankAccountEntity.balance = @20;
+            NSDate *date = [NSDate nullMock];
+            bankAccountEntity.accountNumber = accNumber;
+            
+            [bankAccountDAO stub:@selector(getAccountWithAccNumber:) andReturn:bankAccountEntity];
+            [transactionDAO stub:@selector(depositMoneyIntoAccount:) andReturn:transactionEntity];
+            [transactionEntity stub:@selector(setDate:) withArguments:date];
+            KWCaptureSpy *spy = [transactionDAO captureArgument:@selector(depositMoneyIntoAccount:) atIndex:0];
+            KWCaptureSpy *spy1 = [transactionDAO captureArgument:@selector(saveDepositTransaction:) atIndex:0];
+            [view depositMoneyIntoAccount:accNumber withMoney:depositMoney];
+            bankAccountEntity = spy.argument;
+            transactionEntity = spy1.argument;
+            //[[transactionEntity.date should] equal:date];
+            [[bankAccountEntity.balance should]equal:@30];
+            [[transactionEntity.amount should] equal:@30];
+            [[transactionEntity.accNumber should ] equal:accNumber];
+            
+        });
+        
+        it(@"Withdraw money from account and save transaction", ^{
+            NSString *accNumber = @"123456789";
+            NSNumber *withdrawMoney = @10;
+            NSDate *date = [NSDate nullMock];
             bankAccountEntity.balance = @20;
             bankAccountEntity.accountNumber = accNumber;
             
             [bankAccountDAO stub:@selector(getAccountWithAccNumber:) andReturn:bankAccountEntity];
-            KWCaptureSpy *spy = [transactionDAO captureArgument:@selector(depositMoneyIntoAccount:) atIndex:0];
-            [view depositMoneyIntoAccount:accNumber withMoney:depositMoney];
+            [transactionDAO stub:@selector(withdrawMoneyFromAccount:) andReturn:transactionEntity];
+            [transactionEntity stub:@selector(setDate:) withArguments:date ];
+            KWCaptureSpy *spy = [transactionDAO captureArgument:@selector(withdrawMoneyFromAccount:) atIndex:0];
+            KWCaptureSpy *spy1 = [transactionDAO captureArgument:@selector(saveWithdrawTransaction:) atIndex:0];
+            [view withdrawMoneyFromAccount:accNumber withMoney:withdrawMoney];
             bankAccountEntity = spy.argument;
-            [[bankAccountEntity.balance should]equal:@30];
+            transactionEntity = spy1.argument;
+            //[[transactionEntity.date should] equal:date];
+            [[bankAccountEntity.balance should]equal:@10];
         });
     });
 });

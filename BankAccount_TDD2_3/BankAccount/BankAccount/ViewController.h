@@ -19,4 +19,5 @@
 -(void)openNewAccountWithAccNumber:(NSString *)accNumber;
 -(void)getAccountWithAccNumber:(NSString *) accNumber;
 -(void)depositMoneyIntoAccount:(NSString*) accNumber withMoney:(NSNumber*) money;
+-(void)withdrawMoneyFromAccount:(NSString*) accNumber withMoney:(NSNumber*) money;
 @end

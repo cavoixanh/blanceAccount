@@ -10,4 +10,8 @@
 
 @interface TransactionEntity : NSObject
 
+@property(nonatomic, strong) NSString *accNumber;
+@property(nonatomic, strong) NSNumber *amount;
+@property(nonatomic, strong) NSDate   *date;
+@property(nonatomic, strong) NSNumber *type ;// 1: deposit  -1: withdraw
 @end

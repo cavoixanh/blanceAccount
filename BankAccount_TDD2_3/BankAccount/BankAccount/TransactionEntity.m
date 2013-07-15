@@ -9,5 +9,5 @@
 #import "TransactionEntity.h"
 
 @implementation TransactionEntity
-
+@synthesize date;
 @end

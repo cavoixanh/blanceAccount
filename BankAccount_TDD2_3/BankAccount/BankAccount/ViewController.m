@@ -50,7 +50,29 @@
 -(void)depositMoneyIntoAccount:(NSString*) accNumber withMoney:(NSNumber*) money{
     BankAccountEntity *newEntity = [dao getAccountWithAccNumber:accNumber];
     newEntity.balance = @(newEntity.balance.doubleValue + money.doubleValue);
-    [daoTran depo];
+    TransactionEntity *entity =  [daoTran depositMoneyIntoAccount:newEntity];
+    entity.accNumber = accNumber;
+    entity.amount    = money;
+    entity.date      = [NSDate date];
+    if(entity){
+        NSLog(@"deposit success");
+        [daoTran saveDepositTransaction:entity];
+    }
+}
+-(void)withdrawMoneyFromAccount:(NSString*) accNumber withMoney:(NSNumber*) money{
+    BankAccountEntity *newEntity = [dao getAccountWithAccNumber:accNumber];
+    if(newEntity.balance.doubleValue > money.doubleValue)
+        newEntity.balance = @(newEntity.balance.doubleValue - money.doubleValue);
+    else
+        NSLog(@"not enough");
+    TransactionEntity *entity =  [daoTran withdrawMoneyFromAccount:newEntity];
+    entity.accNumber = accNumber;
+    entity.amount    = money;
+    entity.date      = [NSDate date];
+    if(entity){
+        NSLog(@"deposit success");
+        [daoTran saveWithdrawTransaction:entity];
+    }
 }
 
 @end

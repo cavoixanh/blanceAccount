@@ -10,4 +10,16 @@
 
 @implementation TransactionDAO
 
+-(TransactionEntity*)depositMoneyIntoAccount:(BankAccountEntity*)entity{
+    return nil;
+}
+-(TransactionEntity*)withdrawMoneyFromAccount:(BankAccountEntity*)entity{
+    return nil;
+}
+-(BOOL)saveDepositTransaction:(TransactionEntity*)entity{
+    return YES;
+}
+-(BOOL)saveWithdrawTransaction:(TransactionEntity*)entity{
+    return YES;
+}
 @end
