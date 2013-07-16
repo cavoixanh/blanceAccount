@@ -22,4 +22,13 @@
 -(BOOL)saveWithdrawTransaction:(TransactionEntity*)entity{
     return YES;
 }
+-(NSArray*)getTransactionsOccurred:(NSString*) accNumber{
+    return nil;
+};
+-(NSArray*)getTransactionsFromRanger:(NSString *)accNumber startDate:(NSDate*)startDate endDate:(NSDate*)stopDate{
+    return nil;
+}
+-(NSArray*)getTransactionsWithN:(NSString*) accNumber withN:(NSNumber*)number{
+    return nil;
+}
 @end

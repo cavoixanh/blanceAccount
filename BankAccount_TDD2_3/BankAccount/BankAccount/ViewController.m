@@ -74,5 +74,23 @@
         [daoTran saveWithdrawTransaction:entity];
     }
 }
+-(void)getTransactionList:(NSString *)accNumber{
+    BankAccountEntity *entity = [dao getAccountWithAccNumber:accNumber];
+    if(entity){
+         [daoTran getTransactionsOccurred:accNumber];
+    }
+}
+-(void)getTransactionFromRange:(NSString*) accNumber startDate:(NSDate*)start endDate:(NSDate*)end{
+    BankAccountEntity *entity = [dao getAccountWithAccNumber:accNumber];
+    if(entity){
+        [daoTran getTransactionsFromRanger:accNumber startDate:start endDate:end];
+    }
+}
+-(void)getTransactionFromN:(NSString *) accNumber withN:(NSNumber*)number{
+    BankAccountEntity *entity = [dao getAccountWithAccNumber:accNumber];
+    if(entity){
+        [daoTran getTransactionsWithN:accNumber withN:number];
+    }
+}
 
 @end

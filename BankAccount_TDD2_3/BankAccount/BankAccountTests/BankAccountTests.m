@@ -74,7 +74,7 @@ describe(@"Test Bank Acc", ^{
             transactionEntity = spy1.argument;
             //[[transactionEntity.date should] equal:date];
             [[bankAccountEntity.balance should]equal:@30];
-            [[transactionEntity.amount should] equal:@30];
+            [[transactionEntity.amount should] equal:@10];
             [[transactionEntity.accNumber should ] equal:accNumber];
             
         });
@@ -96,6 +96,52 @@ describe(@"Test Bank Acc", ^{
             transactionEntity = spy1.argument;
             //[[transactionEntity.date should] equal:date];
             [[bankAccountEntity.balance should]equal:@10];
+            [[transactionEntity.amount should] equal:@10];
+        });
+        
+        it(@"list transaction from acc number", ^{
+            NSString *accNumber = @"123456789";
+            bankAccountEntity.accountNumber = accNumber;
+            NSArray *arr = [[NSArray alloc] init];
+            [bankAccountDAO stub:@selector(getAccountWithAccNumber:) andReturn:bankAccountEntity];
+            [transactionDAO stub:@selector(getTransactionsOccurred:) andReturn:arr];
+            KWCaptureSpy *spy = [transactionDAO captureArgument:@selector(getTransactionsOccurred:) atIndex:0];
+            [view getTransactionList:accNumber];
+            NSString * realAccount = spy.argument;
+            [[accNumber should] equal:realAccount];
+        });
+        
+        it(@"list transaction form ranger", ^{
+            NSString *accNumber = @"123456789";
+            bankAccountEntity.accountNumber = accNumber;
+            NSDate *start = [NSDate nullMock];
+            NSDate *end   = [NSDate nullMock];
+            NSArray *arr = [[NSArray alloc] init];
+            [bankAccountDAO stub:@selector(getAccountWithAccNumber:) andReturn:bankAccountEntity];
+            [transactionDAO stub:@selector(getTransactionsFromRanger:startDate:endDate:) andReturn:arr];
+            KWCaptureSpy *spy = [transactionDAO captureArgument:@selector(getTransactionsFromRanger:startDate:endDate:) atIndex:0];
+            KWCaptureSpy *spy1 = [transactionDAO captureArgument:@selector(getTransactionsFromRanger:startDate:endDate:) atIndex:1];
+            KWCaptureSpy *spy2 = [transactionDAO captureArgument:@selector(getTransactionsFromRanger:startDate:endDate:) atIndex:2];
+            
+            [view getTransactionFromRange:accNumber startDate:start endDate:end];
+            [[accNumber should] equal:spy.argument];
+            [[start should] equal:spy1.argument];
+            [[end should] equal:spy2.argument];
+            
+        });
+        
+        it(@"list N transaction", ^{
+            NSString *accNumber = @"123456789";
+            bankAccountEntity.accountNumber = accNumber;
+            NSNumber *N = [NSNumber nullMock];
+            NSArray *arr = [NSArray nullMock];
+            [bankAccountDAO stub:@selector(getAccountWithAccNumber:) andReturn:bankAccountEntity];
+            [transactionDAO stub:@selector(getTransactionsWithN:withN:) andReturn:arr];
+            KWCaptureSpy *spy = [transactionDAO captureArgument:@selector(getTransactionsWithN:withN:) atIndex:0];
+            KWCaptureSpy *spy1 = [transactionDAO captureArgument:@selector(getTransactionsWithN:withN:) atIndex:1];
+            [view getTransactionFromN:accNumber withN:N];
+            [[accNumber should] equal:spy.argument];
+            [[N should] equal:spy1.argument];
         });
     });
 });

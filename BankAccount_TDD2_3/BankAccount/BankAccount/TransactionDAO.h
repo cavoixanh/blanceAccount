@@ -15,4 +15,7 @@
 -(TransactionEntity*)withdrawMoneyFromAccount:(BankAccountEntity*)entity;
 -(BOOL)saveDepositTransaction:(TransactionEntity*)entity;
 -(BOOL)saveWithdrawTransaction:(TransactionEntity*)entity;
+-(NSArray*)getTransactionsOccurred:(NSString*) accNumber;
+-(NSArray*)getTransactionsFromRanger:(NSString *)accNumber startDate:(NSDate*)startDate endDate:(NSDate*)stopDate;
+-(NSArray*)getTransactionsWithN:(NSString*) accNumber withN:(NSNumber*)number;
 @end
