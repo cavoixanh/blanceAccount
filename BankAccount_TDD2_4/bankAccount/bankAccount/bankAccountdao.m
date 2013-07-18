@@ -19,4 +19,7 @@
 -(bankAccountEntity *)updateDepositAccount:(bankAccountEntity *)entity{
     return nil;
 }
+-(bankAccountEntity *)updateWithdrawAccount:(bankAccountEntity *)entity{
+    return nil;
+}
 @end

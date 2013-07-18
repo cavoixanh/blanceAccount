@@ -13,4 +13,5 @@
 -(bankAccountEntity *)insertNewAccount:(bankAccountEntity*) entity;
 -(bankAccountEntity *)getAccount:(NSString*) accNumber;
 -(bankAccountEntity *)updateDepositAccount:(bankAccountEntity *)entity;
+-(bankAccountEntity *)updateWithdrawAccount:(bankAccountEntity *)entity;
 @end

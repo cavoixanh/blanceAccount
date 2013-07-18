@@ -7,7 +7,13 @@
 //
 
 #import "transactionDAO.h"
-
+#import "transactionEntity.h"
 @implementation transactionDAO
 
+-(transactionEntity *) saveDepositTransaction:(transactionEntity*) entity{
+    return nil;
+}
+-(transactionEntity *) saveWithdrawTransaction:(transactionEntity*) entity{
+    return nil;
+}
 @end

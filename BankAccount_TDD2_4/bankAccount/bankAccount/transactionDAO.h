@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "transactionEntity.h"
 @interface transactionDAO : NSObject
 
+-(transactionEntity *) saveDepositTransaction:(transactionEntity*) entity;
+-(transactionEntity *) saveWithdrawTransaction:(transactionEntity*) entity;
 @end

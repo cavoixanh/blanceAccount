@@ -18,18 +18,22 @@ SPEC_BEGIN(bankAccountTest)
 describe(@"test bank account", ^{
     
     __block bankAccountdao *dao;
+    __block transactionDAO *tranDAO;
     __block ViewController *view;
     __block NSString *accNumber;
     beforeAll(^{
         dao = [[bankAccountdao alloc] init];
+        tranDAO = [[transactionDAO alloc] init];
         view = [[ViewController alloc] init];
         //dao = view.dao;
         view.dao = dao;
+        view.tranDAO = tranDAO;
         accNumber = @"123456789";
     });
     
     afterAll(^{
         dao = nil;
+        tranDAO = nil;
         view = nil;
     });
     
@@ -66,6 +70,32 @@ describe(@"test bank account", ^{
         });
         
         it(@"withdraw money", ^{
+            bankAccountEntity * entity = [[bankAccountEntity alloc] init];
+            entity.balance = @50;
+            entity.accountNumber =accNumber;
+            NSNumber *money = @10;
+            [dao stub:@selector(getAccount:) andReturn:entity];
+            KWCaptureSpy *spy = [dao captureArgument:@selector(updateWithdrawAccount:) atIndex:0];
+            [view withdrawFromAnAccount:accNumber withMoney:money];
+            bankAccountEntity *realAccount = spy.argument;
+            [[accNumber should] equal:realAccount.accountNumber];
+            [[realAccount.balance should] equal:@40];
+        });
+        
+        it(@"save deposit transaction", ^{
+            bankAccountEntity *entity = [[bankAccountEntity alloc] init];
+            //NSDate *date = [NSDate nullMock];
+            entity.balance = @50;
+            entity.accountNumber = accNumber;
+            [dao stub:@selector(getAccount:) andReturn:entity];
+            KWCaptureSpy *spy = [tranDAO captureArgument:@selector(saveDepositTransaction:) atIndex:0];
+            transactionEntity * realTransaction = spy.argument;
+            [view depositIntoAnAccount:accNumber withMoney:@50];
+            [[accNumber should] equal:realTransaction.accNumber];
+            [[realTransaction.amount should] equal:@50];
+        });
+        
+        it(@"save withdraw transaction", ^{
             
         });
     });
