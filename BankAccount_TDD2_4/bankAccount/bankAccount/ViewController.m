@@ -58,8 +58,8 @@
         tranEntity1.accNumber = entity.accountNumber;
         tranEntity1.amount = moneyWithdraw;
         tranEntity1.time = [NSDate date];
-        [dao updateDepositAccount:entity];
-        [tranDAO saveDepositTransaction:tranEntity1];
+        if([dao updateDepositAccount:entity])
+            [tranDAO saveDepositTransaction:tranEntity1];
     }
 }
 
@@ -71,8 +71,17 @@
         tranEntity1.accNumber = entity.accountNumber;
         tranEntity1.amount = money;
         tranEntity1.time = [NSDate date];
-        [dao updateWithdrawAccount:entity];
-        [tranDAO saveWithdrawTransaction:tranEntity1];
+        if([dao updateWithdrawAccount:entity])
+            [tranDAO saveWithdrawTransaction:tranEntity1];
     }
+}
+-(void)getListTransaction:(NSString*)accNumber{
+    [tranDAO getListTransaction:accNumber];
+}
+-(void)getListTransaction:(NSString *)accNumber start:(NSDate*)start end:(NSDate*)end{
+    [tranDAO getListTransactionFromRange:start endDate:end FromAccount:accNumber];
+}
+-(void)getListTransaction:(NSString *)accNumber withN:(NSNumber*)number{
+    [tranDAO getListTransactionWithN:accNumber withN:number];
 }
 @end

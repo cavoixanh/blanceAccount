@@ -16,4 +16,13 @@
 -(transactionEntity *) saveWithdrawTransaction:(transactionEntity*) entity{
     return nil;
 }
+-(NSArray *) getListTransaction:(NSString*)accNumber{
+    return nil;
+}
+-(NSArray *) getListTransactionFromRange:(NSDate*)start endDate:(NSDate*)end FromAccount:(NSString*)accNumber{
+    return nil;
+}
+-(NSArray *) getListTransactionWithN:(NSString*) accNumber withN:(NSNumber*)number{
+    return nil;
+}
 @end

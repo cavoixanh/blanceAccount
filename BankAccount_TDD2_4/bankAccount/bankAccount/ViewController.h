@@ -17,4 +17,7 @@
 - (void)getAccountWithAccountNumber:(NSString*) accNumber;
 -(void)depositIntoAnAccount:(NSString *) accNumber withMoney:(NSNumber*)moneyWithdraw;
 -(void)withdrawFromAnAccount:(NSString*) accNumber withMoney:(NSNumber*) money;
+-(void)getListTransaction:(NSString*)accNumber;
+-(void)getListTransaction:(NSString *)accNumber start:(NSDate*)start end:(NSDate*)end;
+-(void)getListTransaction:(NSString *)accNumber withN:(NSNumber*)number; 
 @end
