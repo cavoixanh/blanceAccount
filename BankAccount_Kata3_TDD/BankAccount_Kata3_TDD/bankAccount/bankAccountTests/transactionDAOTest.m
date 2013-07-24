@@ -99,6 +99,21 @@ describe(@"transactionDAO test", ^{
        });
     });
     
+        
+    context(@"get list new transaction ", ^{
+        it(@"get list new transaction", ^{
+            NSString *scriptFilePath = [[NSBundle mainBundle] pathForResource:@"tran_sc5" ofType:@"sql"];
+            [dbEnvi loadScriptFile:scriptFilePath];
+            
+            NSArray *allTrans = [dao getListTransactionWithN:accountNumber withN:@10];
+            [allTrans shouldNotBeNil];
+            [[theValue(allTrans.count) should] equal:theValue(10)];
+            
+            NSArray *allTrans1 = [dao getListTransactionWithN:@"1234567890" withN:@10];
+            [allTrans1 shouldNotBeNil];
+            [[theValue(allTrans1.count) should] equal:theValue(1)];
+        });
+    });
     });
     
 });
