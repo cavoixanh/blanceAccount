@@ -1,0 +1,1 @@
+CREATE TABLE Account (accountnumber text PRIMARY KEY NOT NULL,balance integer,timeOpened text);
