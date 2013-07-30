@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B9E76D217A7980D00628595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76D117A7980D00628595 /* UIKit.framework */; };
+		5B9E76D417A7980D00628595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76D317A7980D00628595 /* Foundation.framework */; };
+		5B9E76D617A7980D00628595 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76D517A7980D00628595 /* CoreGraphics.framework */; };
+		5B9E76DC17A7980D00628595 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76DA17A7980D00628595 /* InfoPlist.strings */; };
+		5B9E76DE17A7980D00628595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E76DD17A7980D00628595 /* main.m */; };
+		5B9E76E217A7980D00628595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E76E117A7980D00628595 /* AppDelegate.m */; };
+		5B9E76E417A7980D00628595 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76E317A7980D00628595 /* Default.png */; };
+		5B9E76E617A7980D00628595 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76E517A7980D00628595 /* Default@2x.png */; };
+		5B9E76E817A7980D00628595 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76E717A7980D00628595 /* Default-568h@2x.png */; };
+		5B9E76EB17A7980D00628595 /* SingleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E76EA17A7980D00628595 /* SingleLinkedList.m */; };
+		5B9E76EE17A7980D00628595 /* SingleLinkedList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76EC17A7980D00628595 /* SingleLinkedList.xib */; };
+		5B9E76F617A7980D00628595 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76F517A7980D00628595 /* SenTestingKit.framework */; };
+		5B9E76F717A7980D00628595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76D117A7980D00628595 /* UIKit.framework */; };
+		5B9E76F817A7980D00628595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76D317A7980D00628595 /* Foundation.framework */; };
+		5B9E770017A7980D00628595 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76FE17A7980D00628595 /* InfoPlist.strings */; };
+		5BB2F76A17A79B440067B040 /* SingleLinkedListTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB2F76917A79B440067B040 /* SingleLinkedListTest.m */; };
+		5BB2F76D17A79CC10067B040 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB2F76C17A79CC10067B040 /* Node.m */; };
+		CDA1BB70C5A44BC49C2E47B4 /* libPods-SingleLinkedListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F71B76325C64D4E9D379A09 /* libPods-SingleLinkedListTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B9E76F917A7980D00628595 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B9E76C617A7980D00628595 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B9E76CD17A7980D00628595;
+			remoteInfo = SingleLinkedList;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E2770217F154FB9A91A8DD0 /* Pods-SingleLinkedListTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleLinkedListTests.xcconfig"; path = "Pods/Pods-SingleLinkedListTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		5B9E76CE17A7980D00628595 /* SingleLinkedList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleLinkedList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9E76D117A7980D00628595 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5B9E76D317A7980D00628595 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5B9E76D517A7980D00628595 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5B9E76D917A7980D00628595 /* SingleLinkedList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SingleLinkedList-Info.plist"; sourceTree = "<group>"; };
+		5B9E76DB17A7980D00628595 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5B9E76DD17A7980D00628595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5B9E76DF17A7980D00628595 /* SingleLinkedList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SingleLinkedList-Prefix.pch"; sourceTree = "<group>"; };
+		5B9E76E017A7980D00628595 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B9E76E117A7980D00628595 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B9E76E317A7980D00628595 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5B9E76E517A7980D00628595 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		5B9E76E717A7980D00628595 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5B9E76E917A7980D00628595 /* SingleLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleLinkedList.h; sourceTree = "<group>"; };
+		5B9E76EA17A7980D00628595 /* SingleLinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleLinkedList.m; sourceTree = "<group>"; };
+		5B9E76ED17A7980D00628595 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SingleLinkedList.xib; sourceTree = "<group>"; };
+		5B9E76F417A7980D00628595 /* SingleLinkedListTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleLinkedListTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9E76F517A7980D00628595 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5B9E76FD17A7980D00628595 /* SingleLinkedListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SingleLinkedListTests-Info.plist"; sourceTree = "<group>"; };
+		5B9E76FF17A7980D00628595 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BB2F76917A79B440067B040 /* SingleLinkedListTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleLinkedListTest.m; sourceTree = "<group>"; };
+		5BB2F76B17A79CC10067B040 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		5BB2F76C17A79CC10067B040 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		5F71B76325C64D4E9D379A09 /* libPods-SingleLinkedListTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SingleLinkedListTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B9E76CB17A7980D00628595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9E76D217A7980D00628595 /* UIKit.framework in Frameworks */,
+				5B9E76D417A7980D00628595 /* Foundation.framework in Frameworks */,
+				5B9E76D617A7980D00628595 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9E76F017A7980D00628595 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9E76F617A7980D00628595 /* SenTestingKit.framework in Frameworks */,
+				5B9E76F717A7980D00628595 /* UIKit.framework in Frameworks */,
+				5B9E76F817A7980D00628595 /* Foundation.framework in Frameworks */,
+				CDA1BB70C5A44BC49C2E47B4 /* libPods-SingleLinkedListTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B9E76C517A7980D00628595 = {
+			isa = PBXGroup;
+			children = (
+				5B9E76D717A7980D00628595 /* SingleLinkedList */,
+				5B9E76FB17A7980D00628595 /* SingleLinkedListTests */,
+				5B9E76D017A7980D00628595 /* Frameworks */,
+				5B9E76CF17A7980D00628595 /* Products */,
+				1E2770217F154FB9A91A8DD0 /* Pods-SingleLinkedListTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		5B9E76CF17A7980D00628595 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E76CE17A7980D00628595 /* SingleLinkedList.app */,
+				5B9E76F417A7980D00628595 /* SingleLinkedListTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B9E76D017A7980D00628595 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E76D117A7980D00628595 /* UIKit.framework */,
+				5B9E76D317A7980D00628595 /* Foundation.framework */,
+				5B9E76D517A7980D00628595 /* CoreGraphics.framework */,
+				5B9E76F517A7980D00628595 /* SenTestingKit.framework */,
+				5F71B76325C64D4E9D379A09 /* libPods-SingleLinkedListTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B9E76D717A7980D00628595 /* SingleLinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E76E017A7980D00628595 /* AppDelegate.h */,
+				5B9E76E117A7980D00628595 /* AppDelegate.m */,
+				5B9E76E917A7980D00628595 /* SingleLinkedList.h */,
+				5B9E76EA17A7980D00628595 /* SingleLinkedList.m */,
+				5B9E76EC17A7980D00628595 /* SingleLinkedList.xib */,
+				5B9E76D817A7980D00628595 /* Supporting Files */,
+				5BB2F76B17A79CC10067B040 /* Node.h */,
+				5BB2F76C17A79CC10067B040 /* Node.m */,
+			);
+			path = SingleLinkedList;
+			sourceTree = "<group>";
+		};
+		5B9E76D817A7980D00628595 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E76D917A7980D00628595 /* SingleLinkedList-Info.plist */,
+				5B9E76DA17A7980D00628595 /* InfoPlist.strings */,
+				5B9E76DD17A7980D00628595 /* main.m */,
+				5B9E76DF17A7980D00628595 /* SingleLinkedList-Prefix.pch */,
+				5B9E76E317A7980D00628595 /* Default.png */,
+				5B9E76E517A7980D00628595 /* Default@2x.png */,
+				5B9E76E717A7980D00628595 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B9E76FB17A7980D00628595 /* SingleLinkedListTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E76FC17A7980D00628595 /* Supporting Files */,
+				5BB2F76917A79B440067B040 /* SingleLinkedListTest.m */,
+			);
+			path = SingleLinkedListTests;
+			sourceTree = "<group>";
+		};
+		5B9E76FC17A7980D00628595 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B9E76FD17A7980D00628595 /* SingleLinkedListTests-Info.plist */,
+				5B9E76FE17A7980D00628595 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B9E76CD17A7980D00628595 /* SingleLinkedList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9E770617A7980D00628595 /* Build configuration list for PBXNativeTarget "SingleLinkedList" */;
+			buildPhases = (
+				5B9E76CA17A7980D00628595 /* Sources */,
+				5B9E76CB17A7980D00628595 /* Frameworks */,
+				5B9E76CC17A7980D00628595 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SingleLinkedList;
+			productName = SingleLinkedList;
+			productReference = 5B9E76CE17A7980D00628595 /* SingleLinkedList.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B9E76F317A7980D00628595 /* SingleLinkedListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9E770917A7980D00628595 /* Build configuration list for PBXNativeTarget "SingleLinkedListTests" */;
+			buildPhases = (
+				9D33DDA634AF43F08A2505B8 /* Check Pods Manifest.lock */,
+				5B9E76EF17A7980D00628595 /* Sources */,
+				5B9E76F017A7980D00628595 /* Frameworks */,
+				5B9E76F117A7980D00628595 /* Resources */,
+				5B9E76F217A7980D00628595 /* ShellScript */,
+				BEFAB4BACFF74838A29AAAAF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B9E76FA17A7980D00628595 /* PBXTargetDependency */,
+			);
+			name = SingleLinkedListTests;
+			productName = SingleLinkedListTests;
+			productReference = 5B9E76F417A7980D00628595 /* SingleLinkedListTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B9E76C617A7980D00628595 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Thett;
+			};
+			buildConfigurationList = 5B9E76C917A7980D00628595 /* Build configuration list for PBXProject "SingleLinkedList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5B9E76C517A7980D00628595;
+			productRefGroup = 5B9E76CF17A7980D00628595 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B9E76CD17A7980D00628595 /* SingleLinkedList */,
+				5B9E76F317A7980D00628595 /* SingleLinkedListTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B9E76CC17A7980D00628595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9E76DC17A7980D00628595 /* InfoPlist.strings in Resources */,
+				5B9E76E417A7980D00628595 /* Default.png in Resources */,
+				5B9E76E617A7980D00628595 /* Default@2x.png in Resources */,
+				5B9E76E817A7980D00628595 /* Default-568h@2x.png in Resources */,
+				5B9E76EE17A7980D00628595 /* SingleLinkedList.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9E76F117A7980D00628595 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9E770017A7980D00628595 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B9E76F217A7980D00628595 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		9D33DDA634AF43F08A2505B8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		BEFAB4BACFF74838A29AAAAF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-SingleLinkedListTests-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B9E76CA17A7980D00628595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B9E76DE17A7980D00628595 /* main.m in Sources */,
+				5B9E76E217A7980D00628595 /* AppDelegate.m in Sources */,
+				5B9E76EB17A7980D00628595 /* SingleLinkedList.m in Sources */,
+				5BB2F76D17A79CC10067B040 /* Node.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B9E76EF17A7980D00628595 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB2F76A17A79B440067B040 /* SingleLinkedListTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B9E76FA17A7980D00628595 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B9E76CD17A7980D00628595 /* SingleLinkedList */;
+			targetProxy = 5B9E76F917A7980D00628595 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B9E76DA17A7980D00628595 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B9E76DB17A7980D00628595 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5B9E76EC17A7980D00628595 /* SingleLinkedList.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B9E76ED17A7980D00628595 /* en */,
+			);
+			name = SingleLinkedList.xib;
+			sourceTree = "<group>";
+		};
+		5B9E76FE17A7980D00628595 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B9E76FF17A7980D00628595 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B9E770417A7980D00628595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5B9E770517A7980D00628595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B9E770717A7980D00628595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SingleLinkedList/SingleLinkedList-Prefix.pch";
+				INFOPLIST_FILE = "SingleLinkedList/SingleLinkedList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5B9E770817A7980D00628595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SingleLinkedList/SingleLinkedList-Prefix.pch";
+				INFOPLIST_FILE = "SingleLinkedList/SingleLinkedList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5B9E770A17A7980D00628595 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E2770217F154FB9A91A8DD0 /* Pods-SingleLinkedListTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SingleLinkedList.app/SingleLinkedList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SingleLinkedList/SingleLinkedList-Prefix.pch";
+				INFOPLIST_FILE = "SingleLinkedListTests/SingleLinkedListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		5B9E770B17A7980D00628595 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E2770217F154FB9A91A8DD0 /* Pods-SingleLinkedListTests.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SingleLinkedList.app/SingleLinkedList";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SingleLinkedList/SingleLinkedList-Prefix.pch";
+				INFOPLIST_FILE = "SingleLinkedListTests/SingleLinkedListTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B9E76C917A7980D00628595 /* Build configuration list for PBXProject "SingleLinkedList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9E770417A7980D00628595 /* Debug */,
+				5B9E770517A7980D00628595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9E770617A7980D00628595 /* Build configuration list for PBXNativeTarget "SingleLinkedList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9E770717A7980D00628595 /* Debug */,
+				5B9E770817A7980D00628595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9E770917A7980D00628595 /* Build configuration list for PBXNativeTarget "SingleLinkedListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B9E770A17A7980D00628595 /* Debug */,
+				5B9E770B17A7980D00628595 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B9E76C617A7980D00628595 /* Project object */;
+}
