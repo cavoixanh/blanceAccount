@@ -29,6 +29,18 @@
 		5B2EAFB41797C683007588BB /* transactionDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2EAFB31797C683007588BB /* transactionDAO.m */; };
 		5B9E76AD17A7518700628595 /* bankAccountdaoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E76AC17A7518700628595 /* bankAccountdaoTest.m */; };
 		5B9E76AF17A7519A00628595 /* transactionDAOTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9E76AE17A7519A00628595 /* transactionDAOTest.m */; };
+		5B9E76B117A7522500628595 /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76B017A7522500628595 /* LocalStorage.framework */; };
+		5B9E76B417A752C700628595 /* CreateTable.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76B217A752C700628595 /* CreateTable.sql */; };
+		5B9E76B517A752C700628595 /* InsertTransaction.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76B317A752C700628595 /* InsertTransaction.sql */; };
+		5B9E76B917A752DA00628595 /* CreateDB.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76B617A752DA00628595 /* CreateDB.sql */; };
+		5B9E76BA17A752DA00628595 /* GetAcc.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76B717A752DA00628595 /* GetAcc.sql */; };
+		5B9E76BB17A752DA00628595 /* InsertManyAccount.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76B817A752DA00628595 /* InsertManyAccount.sql */; };
+		5B9E76BD17A752E700628595 /* InsertAcc.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5B9E76BC17A752E700628595 /* InsertAcc.sql */; };
+		5B9E76BE17A7538500628595 /* LocalStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76B017A7522500628595 /* LocalStorage.framework */; };
+		5B9E76C117A753AD00628595 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76BF17A753AD00628595 /* libsqlite3.0.dylib */; };
+		5B9E76C217A753AD00628595 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76C017A753AD00628595 /* libsqlite3.dylib */; };
+		5B9E76C317A753C000628595 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76BF17A753AD00628595 /* libsqlite3.0.dylib */; };
+		5B9E76C417A753C200628595 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9E76C017A753AD00628595 /* libsqlite3.dylib */; };
 		7DD1F0A8812C490EA7D856FB /* libPods-bankAccountTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8FDEB56C61401EA9A9BC64 /* libPods-bankAccountTests.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +88,15 @@
 		5B2EAFB31797C683007588BB /* transactionDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transactionDAO.m; sourceTree = "<group>"; };
 		5B9E76AC17A7518700628595 /* bankAccountdaoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bankAccountdaoTest.m; sourceTree = "<group>"; };
 		5B9E76AE17A7519A00628595 /* transactionDAOTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transactionDAOTest.m; sourceTree = "<group>"; };
+		5B9E76B017A7522500628595 /* LocalStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LocalStorage.framework; sourceTree = "<group>"; };
+		5B9E76B217A752C700628595 /* CreateTable.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CreateTable.sql; sourceTree = "<group>"; };
+		5B9E76B317A752C700628595 /* InsertTransaction.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InsertTransaction.sql; sourceTree = "<group>"; };
+		5B9E76B617A752DA00628595 /* CreateDB.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CreateDB.sql; sourceTree = "<group>"; };
+		5B9E76B717A752DA00628595 /* GetAcc.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GetAcc.sql; sourceTree = "<group>"; };
+		5B9E76B817A752DA00628595 /* InsertManyAccount.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InsertManyAccount.sql; sourceTree = "<group>"; };
+		5B9E76BC17A752E700628595 /* InsertAcc.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InsertAcc.sql; sourceTree = "<group>"; };
+		5B9E76BF17A753AD00628595 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		5B9E76C017A753AD00628595 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		7A8FDEB56C61401EA9A9BC64 /* libPods-bankAccountTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bankAccountTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,9 +105,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9E76C117A753AD00628595 /* libsqlite3.0.dylib in Frameworks */,
+				5B9E76C217A753AD00628595 /* libsqlite3.dylib in Frameworks */,
 				5B2EAF6C1797C4B0007588BB /* UIKit.framework in Frameworks */,
 				5B2EAF6E1797C4B0007588BB /* Foundation.framework in Frameworks */,
 				5B2EAF701797C4B0007588BB /* CoreGraphics.framework in Frameworks */,
+				5B9E76BE17A7538500628595 /* LocalStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +122,9 @@
 				5B2EAF911797C4B1007588BB /* UIKit.framework in Frameworks */,
 				5B2EAF921797C4B1007588BB /* Foundation.framework in Frameworks */,
 				7DD1F0A8812C490EA7D856FB /* libPods-bankAccountTests.a in Frameworks */,
+				5B9E76B117A7522500628595 /* LocalStorage.framework in Frameworks */,
+				5B9E76C317A753C000628595 /* libsqlite3.0.dylib in Frameworks */,
+				5B9E76C417A753C200628595 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +134,8 @@
 		5B2EAF5F1797C4B0007588BB = {
 			isa = PBXGroup;
 			children = (
+				5B9E76BF17A753AD00628595 /* libsqlite3.0.dylib */,
+				5B9E76C017A753AD00628595 /* libsqlite3.dylib */,
 				5B2EAF711797C4B0007588BB /* bankAccount */,
 				5B2EAF951797C4B1007588BB /* bankAccountTests */,
 				5B2EAF6A1797C4B0007588BB /* Frameworks */,
@@ -127,6 +156,7 @@
 		5B2EAF6A1797C4B0007588BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B9E76B017A7522500628595 /* LocalStorage.framework */,
 				5B2EAF6B1797C4B0007588BB /* UIKit.framework */,
 				5B2EAF6D1797C4B0007588BB /* Foundation.framework */,
 				5B2EAF6F1797C4B0007588BB /* CoreGraphics.framework */,
@@ -229,6 +259,8 @@
 		5B9E76AA17A7515700628595 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
+				5B9E76B217A752C700628595 /* CreateTable.sql */,
+				5B9E76B317A752C700628595 /* InsertTransaction.sql */,
 			);
 			name = Transaction;
 			sourceTree = "<group>";
@@ -236,6 +268,10 @@
 		5B9E76AB17A7516A00628595 /* bankAccDAO */ = {
 			isa = PBXGroup;
 			children = (
+				5B9E76BC17A752E700628595 /* InsertAcc.sql */,
+				5B9E76B617A752DA00628595 /* CreateDB.sql */,
+				5B9E76B717A752DA00628595 /* GetAcc.sql */,
+				5B9E76B817A752DA00628595 /* InsertManyAccount.sql */,
 			);
 			name = bankAccDAO;
 			sourceTree = "<group>";
@@ -318,6 +354,12 @@
 				5B2EAF801797C4B0007588BB /* Default@2x.png in Resources */,
 				5B2EAF821797C4B0007588BB /* Default-568h@2x.png in Resources */,
 				5B2EAF881797C4B0007588BB /* ViewController.xib in Resources */,
+				5B9E76B417A752C700628595 /* CreateTable.sql in Resources */,
+				5B9E76B517A752C700628595 /* InsertTransaction.sql in Resources */,
+				5B9E76B917A752DA00628595 /* CreateDB.sql in Resources */,
+				5B9E76BA17A752DA00628595 /* GetAcc.sql in Resources */,
+				5B9E76BB17A752DA00628595 /* InsertManyAccount.sql in Resources */,
+				5B9E76BD17A752E700628595 /* InsertAcc.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +539,10 @@
 		5B2EAFA11797C4B1007588BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bankAccount/bankAccount-Prefix.pch";
 				INFOPLIST_FILE = "bankAccount/bankAccount-Info.plist";
@@ -508,6 +554,10 @@
 		5B2EAFA21797C4B1007588BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bankAccount/bankAccount-Prefix.pch";
 				INFOPLIST_FILE = "bankAccount/bankAccount-Info.plist";
@@ -524,6 +574,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bankAccount/bankAccount-Prefix.pch";
@@ -542,6 +593,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bankAccount/bankAccount-Prefix.pch";

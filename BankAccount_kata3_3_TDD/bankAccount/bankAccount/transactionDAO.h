@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <LocalStorage/LocalStorage.h>
 #import "transactionEntity.h"
 @interface transactionDAO : NSObject
+
+@property(nonatomic, strong) FMDatabaseQueue *dataAccessHelper;
 
 -(transactionEntity *) saveDepositTransaction:(transactionEntity*) entity;
 -(transactionEntity *) saveWithdrawTransaction:(transactionEntity*) entity;

@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <LocalStorage/LocalStorage.h>
 #import "bankAccountEntity.h"
 @interface bankAccountdao : NSObject
+
+@property(nonatomic, strong) FMDatabaseQueue *dataAccessHelper;
+@property(nonatomic, strong) NSError *error;
 
 -(bankAccountEntity *)insertNewAccount:(bankAccountEntity*) entity;
 -(bankAccountEntity *)getAccount:(NSString*) accNumber;
